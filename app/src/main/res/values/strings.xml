@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">X Bank</string>
+    <string name="enterToNetbank">Enter to Netbank</string>
+    <string name="selectLanguage">Select language</string>
+    <string name="branchAndAtmList">Branch- and ATM list</string>
+    <string name="rateOfExchange">Exchange rates</string>
+    <string name="contact">Contacts</string>
+    <string name="information">Information</string>
+    <string name="text_select_language">Select language:</string>
+    <string name="text_english">English</string>
+    <string name="text_hungarian">magyar</string>
+    <string name="text_proceed">Submit</string>
+
+    <string name="text_enter">Enter</string>
+    <string name="text_enter_pin_code">Enter PIN code!</string>
+    <string name="text_not_logged_in">You are NOT logged in!</string>
+    <string name="text_logged_in">You are logged in!</string>
+    <string name="text_wrong_pin_code">Wrong PIN code!</string>
+    <string name="text_logout">Log out</string>
+    <string name="text_pin_code_rule">PIN code must be between 4 and 6 digits!</string>
+    <string name="text_banned_1">You have to wait "</string>
+    <string name="text_banned_2"> seconds!"</string>
+
+    <string name="welcomeText_1">X Bank ..."</string>
+    <string name="welcomeText_2">... your future bank!"</string>
+
+
+</resources>

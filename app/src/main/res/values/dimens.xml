@@ -1,0 +1,8 @@
+<resources>
+    <dimen name="text_size">16sp</dimen>
+    <dimen name="logo_size">90dp</dimen>
+    <dimen name="margin_top">20dp</dimen>
+    <dimen name="margin_for_lines">16dp</dimen>
+    <dimen name="padding_for_text">8dp</dimen>
+    <dimen name="toolbar_height">48dp</dimen>
+</resources>

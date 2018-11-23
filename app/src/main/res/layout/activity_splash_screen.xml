@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="tamas.verovszki.xbank.SplashScreenActivity"
+    android:background="@drawable/leafbackground">
+
+    <LinearLayout
+        android:id="@+id/Linear_Layout_SplashScreen_1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+
+    <TextView
+        android:id="@+id/TextViewSplashScreen1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="48sp"
+        android:shadowColor="@color/black"
+        android:shadowDy="3"
+        android:shadowDx="3"
+        android:shadowRadius="3"
+        android:textColor="@color/white_opacity_90"
+        android:text="@string/welcomeText_1"/>
+
+    <TextView
+        android:id="@+id/TextViewSplashScreen2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:shadowColor="@color/black"
+        android:shadowDy="3"
+        android:shadowDx="3"
+        android:shadowRadius="3"
+        android:textColor="@color/lightgrey"
+        android:text="@string/welcomeText_2"/>
+    </LinearLayout>
+
+</RelativeLayout>

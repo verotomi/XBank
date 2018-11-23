@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="delayForSplashScreen">3000</integer> <!-- in milliseconds -->
+    <integer name="bouncingDuration">2000</integer> <!-- in milliseconds -->
+    <integer name="timeToWait">10</integer> <!-- in seconds -->
+    <integer name="maxWrongAttempts">3</integer>
+    <integer name="vibrateLength">15</integer> <!-- in milliseconds -->
+</resources>

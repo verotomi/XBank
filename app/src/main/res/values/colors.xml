@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#FFFFFF</color>
+    <color name="white_opacity_85">#D9FFFFFF</color> <!-- 85% opacity = D9 in hexa !-->
+    <color name="white_opacity_90">#E6FFFFFF</color> <!-- 90% opacity = E6 in hexa !-->
+    <color name="lightgrey">#EEEEEE</color>
+    <color name="darkgrey">#292929</color>
+    <color name="black">#000000</color>
+    <color name="orange">#ff7b00</color>
+    <color name="green">#7BF765</color>
+    <color name="verylightgreen">#87FF8B</color>
+    <color name="darkgreen">#1d7227</color>
+    <color name="darkgreen2">#004f09</color>
+    <color name="darkgreen3">#20b22c</color>
+
+    <color name="red">#FF5050</color>
+    <color name="faded_white">#8FFF</color><!-- az első karakter az alfa csatorna!-->
+</resources>
