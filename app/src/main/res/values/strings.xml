@@ -24,5 +24,38 @@
     <string name="welcomeText_1">X Bank ..."</string>
     <string name="welcomeText_2">... your future bank!"</string>
 
+    <string name="text_confirm_exit">Are you sure you want to logout?"</string>
+
+    <string name="currency">Currency"</string>
+    <string name="foreign_currency">Foreign currency"</string>
+    <string name="text_buy">Buy:"</string>
+    <string name="text_sell">Sell:"</string>
+    <string name="text_date">Date:"</string>
+
+    <string name="tab">\u0009\u0009\u0009\u0009</string><!-- csak így működik a tabulátor :( jelen formájában 4 karaktert ugrik-->
+
+    <string name="opening_hours">Open:"</string>
+    <string name="text_branches">Branches"</string>
+    <string name="text_atms">ATM-s"</string>
+    <string name="atm_type">ATM type"</string>
+    <string name="open">Open"</string>
+    <string name="closed">Closed"</string>
+    <string name="forint">Forint"</string>
+    <string name="euro">EUR"</string>
+
+    <string name="email_us">Write us an email"</string>
+    <string name="email_address">info@xbank.com"</string>
+    <string name="call_us">Call us"</string>
+    <string name="phone_number">+36-1-123-4567"</string>
+    <string name="facebook">Watch us on Facebook"</string>
+    <string name="facebook_address">facebook.com/xbank"</string>
+    <string name="homepage">Visit our homepage"</string>
+    <string name="homepage_address">www.xbank.com"</string>
+
+    <string name="text_phone_permission">Please grant the permission to call!"</string>
+
+    <string name="email_subject">Information request"</string>
+    <string name="email_app_chooser_text">Choose an app:"</string>
+
 
 </resources>

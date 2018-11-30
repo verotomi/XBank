@@ -54,7 +54,7 @@
             android:layout_weight="1"
             >
 
-            <ImageButton
+            <ImageView
                 android:id="@+id/ImageButton11"
                 android:layout_width="@dimen/logo_size"
                 android:layout_height="@dimen/logo_size"
@@ -105,7 +105,7 @@
             android:layout_weight="1"
             >
 
-            <ImageButton
+            <ImageView
                 android:id="@+id/ImageButton12"
                 android:layout_width="@dimen/logo_size"
                 android:layout_height="@dimen/logo_size"
@@ -165,7 +165,7 @@
             android:layout_weight="1"
             >
 
-            <ImageButton
+            <ImageView
                 android:id="@+id/ImageButton21"
                 android:layout_width="@dimen/logo_size"
                 android:layout_height="@dimen/logo_size"
@@ -217,7 +217,7 @@
             android:layout_weight="1"
             >
 
-            <ImageButton
+            <ImageView
                 android:id="@+id/ImageButton22"
                 android:layout_width="@dimen/logo_size"
                 android:layout_height="@dimen/logo_size"
@@ -277,7 +277,7 @@
             android:layout_weight="1"
             >
 
-            <ImageButton
+            <ImageView
                 android:id="@+id/ImageButton31"
                 android:layout_width="@dimen/logo_size"
                 android:layout_height="@dimen/logo_size"
@@ -329,7 +329,7 @@
             android:layout_weight="1"
             >
 
-            <ImageButton
+            <ImageView
                 android:id="@+id/ImageButton32"
                 android:layout_width="@dimen/logo_size"
                 android:layout_height="@dimen/logo_size"

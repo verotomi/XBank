@@ -1,0 +1,120 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".ExchangeRatesActivity">
+    <!-- context-et utólag raktam be!-->
+
+    <RelativeLayout
+        android:id="@+id/RelLay1c"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+c
+        <TextView
+            android:id="@+id/currencyc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="USD"
+            android:textSize="24sp"
+            android:layout_marginRight="30dp"
+            android:textAppearance="?android:attr/textAppearanceButton"
+            android:textColor="@android:color/holo_red_dark"
+            android:textStyle="bold"
+            android:shadowColor="@color/white_opacity_85"
+            android:shadowDy="1"
+            android:shadowDx="2"
+            android:shadowRadius="2"
+
+            />
+
+        <LinearLayout
+            android:id="@+id/value_headerc"
+            android:layout_toRightOf="@+id/currencyc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/buy_headerc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_buy"
+                android:textStyle="bold"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/sell_headerc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_below="@+id/namec"
+                android:layout_marginTop="5dp"
+                android:text="@string/text_sell"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_toRightOf="@+id/value_headerc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/buy_valuec"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="332,27"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/sell_valuec"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/name"
+                android:layout_marginTop="5dp"
+                android:text="344,50"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+            <ImageView
+                android:id="@+id/item_infoc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@android:drawable/ic_dialog_info" />
+    </RelativeLayout>
+
+    <!-- ezt a két vonalat csak akkor rakjam vissza, ha ki tudtam szedni a listview-ből a sor-elválasztó vonalat.
+    <View
+        android:id="@+id/LineDarkGreen"
+        android:layout_below="@id/RelLay1"
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="2sp"
+        android:layout_marginBottom="2sp"
+        android:background="@color/darkgreen"
+        android:layout_marginLeft="@dimen/margin_for_lines"
+        android:layout_marginRight="@dimen/margin_for_lines"/>
+
+    <View
+        android:id="@+id/LineGreen"
+        android:layout_below="@id/LineDarkGreen"
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:layout_gravity="center"
+        android:background="@color/green"
+        android:layout_marginLeft="@dimen/margin_for_lines"
+        android:layout_marginRight="@dimen/margin_for_lines"/>
+        -->
+
+
+</RelativeLayout>

@@ -2,7 +2,6 @@ package tamas.verovszki.xbank;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -29,58 +28,7 @@ public class LoginActivity extends AppCompatActivity {
     boolean banned = false;
     private int wrongAttempts = 0;
     private Toolbar toolbar;
-    MenuItem menuitem_logout_2;
-
-    public void init(){
-        Button_1 = (Button) findViewById(R.id.Button_1);
-        Button_2 = (Button) findViewById(R.id.Button_2);
-        Button_3 = (Button) findViewById(R.id.Button_3);
-        Button_4 = (Button) findViewById(R.id.Button_4);
-        Button_5 = (Button) findViewById(R.id.Button_5);
-        Button_6 = (Button) findViewById(R.id.Button_6);
-        Button_7 = (Button) findViewById(R.id.Button_7);
-        Button_8 = (Button) findViewById(R.id.Button_8);
-        Button_9 = (Button) findViewById(R.id.Button_9);
-        Button_0 = (Button) findViewById(R.id.Button_0);
-        Button_back = (Button) findViewById(R.id.Button_back);
-        Button_enter = (Button) findViewById(R.id.Button_enter);
-        Button_logout = (Button) findViewById(R.id.Button_logout);
-        Text_View_Enter_PIN_Code = (TextView) findViewById(R.id.Text_View_Enter_PIN_Code); //töröltem
-        Text_View_Stars = (TextView) findViewById(R.id.Text_View_Stars);
-        Text_View_Dialogue = (TextView) findViewById(R.id.Text_View_Dialogue);
-
-        // setTitle(R.string.app_label); // cimke frissitése. Lokalizáció miatt kell
-    }
-
-    public void banned() { // x db hibás kód utáni letiltás x ideig
-        final int waitingTime = getResources().getInteger(R.integer.timeToWait);
-        banned = true;
-
-        new CountDownTimer(waitingTime*1000, 1000) { // Visszaszámlálás (absztrakt osztály)
-            public void onTick(long millisUntilFinished) { // meghatározott időközönként végrehajtódik ez a metódus
-                Text_View_Dialogue.setText(getString(R.string.text_wrong_pin_code) + " " + getString(R.string.text_banned_1) + (millisUntilFinished / 1000) + " " + getString(R.string.text_banned_2));
-            }
-            public void onFinish() { // számláló lejáratakor hajtódik végre
-                Text_View_Dialogue.setText(R.string.text_not_logged_in);
-                banned = false;
-            }
-        }.start();
-    }
-
-    public void vibrateForXMillisec(int milliSec){
-        Vibrator v = (Vibrator) getSystemService(MainActivity.VIBRATOR_SERVICE);
-        v.vibrate(milliSec);
-    }
-
-    /* @Override // ez sem működik :(
-    public boolean onOptionsItemSelected(MenuItem item) { // ez a pár sor is kell az AppBar visszanyílhoz,
-        switch (item.getItemId()){
-            case android.R.id.home:
-                NavUtils.navigateUpFromSameTask(this);
-                return true; //gondolom a return miatt nem kell a break
-        }
-        return super.onOptionsItemSelected(item);
-    }*/
+    //MenuItem menuitem_logout_2; kiszedtem utólag, ide nem kell kijelentkező ikon
 
     /*@Override // nem működik
     public boolean onSupportNavigateUp() { // ez a pár sor is kell az AppBar visszanyílhoz,
@@ -92,7 +40,10 @@ public class LoginActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_loginactivity, menu); // elemek hozzáadása a toolbarhoz
 
+        /* kiszedtem, mert mégsem kell ide kilépés ikon
         menuitem_logout_2 = menu.findItem(R.id.logout_toolbar_icon_2);
+
+        loginState = Utility.getLoginState(LoginActivity.this);
         if (loginState){
             menuitem_logout_2.setVisible(true);
             menuitem_logout_2.setEnabled(true);
@@ -100,42 +51,46 @@ public class LoginActivity extends AppCompatActivity {
         else{
             menuitem_logout_2.setEnabled(false);
             menuitem_logout_2.setVisible(false);
-        }
+        }*/
         return true;
     }
 
+    /**
+     * Itt kell kezelni a toolbar-gombok kattintásait. A visszanyíl kattintást a rendszer kezeli!
+     *
+     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // itt kell kezelni a toolbar-gombok kattintásait. A visszanyíl kattintást a rendszer kezeli!
 
+        /* kiszedtem, mert ide nem kell még "bejelentkezve" állapot
         int id = item.getItemId();
 
-        if (id == R.id.logout_toolbar_icon_2){
-            if (Utility.askForConfirmExit(LoginActivity.this)){
+        if (id == R.id.logout_toolbar_icon_2){ // ha a kilépés ikonra kattintottunk
+            if (Utility.askForConfirmExit(LoginActivity.this)){ // "biztos, hogy ki akarsz lépni?" alert
                 menuitem_logout_2.setEnabled(false);
                 menuitem_logout_2.setVisible(false);
-
-                SharedPreferences sp = getSharedPreferences("mentett_adatok", Context.MODE_PRIVATE);
-                SharedPreferences.Editor editor = sp.edit();
-                editor.putString("bejelentkezve", "nem");
-                editor.apply();
+                Utility.setLoginState(LoginActivity.this, false); // elmenti a "kilépve" állapotot
                 loginState = false;
-
                 Toast.makeText(this, "Vissza a főmenübe!", Toast.LENGTH_SHORT).show();
                 // Új Activity
                 Utility.CallNextActivity(LoginActivity.this, MainActivity.class);
-
-                /* átraktam külső metódusba :)
-                Intent intent = new Intent(NetBankMainActivity.this, MainActivity.class); // új Activity példányosítása
-                startActivity(intent); // Új Activity elindítása
-                 */
                 finish();
             }
-
             return true;
-        }
-
+        }*/
         return super.onOptionsItemSelected(item);
+    }
+
+    /**
+     * Toolbarban található visszanyíl kezelése
+     * @return
+     */
+    @Override
+    public boolean onSupportNavigateUp() {
+        Utility.CallNextActivity(LoginActivity.this, MainActivity.class);
+        finish();
+        return true;
+        // return super.onSupportNavigateUp(); ez magától íródott be
     }
 
     @Override
@@ -144,26 +99,19 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        toolbar = (Toolbar) findViewById(R.id.tool_bar);
-        setSupportActionBar(toolbar);
-
-        SharedPreferences sp = getSharedPreferences("mentett_adatok", Context.MODE_PRIVATE);
-        String loginStateisLoggedIn = sp.getString("bejelentkezve", "nem");
-        if (loginStateisLoggedIn.equals("igen")){
-            loginState = true;
-        }
-        else{
-            loginState = false;
-        }
-
-        // getSupportActionBar().setDisplayHomeAsUpEnabled(true); // visszanyíl az AppBar-ba
-
         init();
+        setSupportActionBar(toolbar); // Toolbar megjelenítése
+        loginState = Utility.getLoginState(LoginActivity.this); // be vagyunk jelentkezve?
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true); // visszanyíl megjelenítése a toolbarban
+        if (loginState){ // ha már be vagyunk jelentkezve, akkor átugorjuk a pin-kód bekérést! MIvel ezt lekezelem, ezért feleslegessé vált ezen az activityn a kilépés gomb!
+            Utility.CallNextActivity(LoginActivity.this, NetBankMainActivity.class);
+            finish(); // ez fontos, kell ide!!!
+        }
 
         Button_1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                vibrateForXMillisec(getResources().getInteger(R.integer.vibrateLength));
+                Utility.vibrateForXMillisec(LoginActivity.this, getResources().getInteger(R.integer.vibrateLength));
                 if (loginState == false && enteredPincode.length() < 6 && !banned) {
                     enteredPincode += "1";
                     stars += "*";
@@ -175,7 +123,7 @@ public class LoginActivity extends AppCompatActivity {
         Button_2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                vibrateForXMillisec(getResources().getInteger(R.integer.vibrateLength));
+                Utility.vibrateForXMillisec(LoginActivity.this, getResources().getInteger(R.integer.vibrateLength));
                 if (loginState == false && enteredPincode.length() < 6 && !banned) {
                     enteredPincode += "2";
                     stars += "*";
@@ -187,7 +135,7 @@ public class LoginActivity extends AppCompatActivity {
         Button_3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                vibrateForXMillisec(getResources().getInteger(R.integer.vibrateLength));
+                Utility.vibrateForXMillisec(LoginActivity.this, getResources().getInteger(R.integer.vibrateLength));
                 if (loginState == false && enteredPincode.length() < 6 && !banned) {
                     enteredPincode += "3";
                     stars += "*";
@@ -199,7 +147,7 @@ public class LoginActivity extends AppCompatActivity {
         Button_4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                vibrateForXMillisec(getResources().getInteger(R.integer.vibrateLength));
+                Utility.vibrateForXMillisec(LoginActivity.this, getResources().getInteger(R.integer.vibrateLength));
                 if (loginState == false && enteredPincode.length() < 6 && !banned) {
                     enteredPincode += "4";
                     stars += "*";
@@ -211,7 +159,7 @@ public class LoginActivity extends AppCompatActivity {
         Button_5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                vibrateForXMillisec(getResources().getInteger(R.integer.vibrateLength));
+                Utility.vibrateForXMillisec(LoginActivity.this, getResources().getInteger(R.integer.vibrateLength));
                 if (loginState == false && enteredPincode.length() < 6 && !banned) {
                     enteredPincode += "5";
                     stars += "*";
@@ -223,7 +171,7 @@ public class LoginActivity extends AppCompatActivity {
         Button_6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                vibrateForXMillisec(getResources().getInteger(R.integer.vibrateLength));
+                Utility.vibrateForXMillisec(LoginActivity.this, getResources().getInteger(R.integer.vibrateLength));
                 if (loginState == false && enteredPincode.length() < 6 && !banned) {
                     enteredPincode += "6";
                     stars += "*";
@@ -235,7 +183,7 @@ public class LoginActivity extends AppCompatActivity {
         Button_7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                vibrateForXMillisec(getResources().getInteger(R.integer.vibrateLength));
+                Utility.vibrateForXMillisec(LoginActivity.this, getResources().getInteger(R.integer.vibrateLength));
                 if (loginState == false && enteredPincode.length() < 6 && !banned) {
                     enteredPincode += "7";
                     stars += "*";
@@ -247,7 +195,7 @@ public class LoginActivity extends AppCompatActivity {
         Button_8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                vibrateForXMillisec(getResources().getInteger(R.integer.vibrateLength));
+                Utility.vibrateForXMillisec(LoginActivity.this, getResources().getInteger(R.integer.vibrateLength));
                 if (loginState == false && enteredPincode.length() < 6 && !banned) {
                     enteredPincode += "8";
                     stars += "*";
@@ -259,7 +207,7 @@ public class LoginActivity extends AppCompatActivity {
         Button_9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                vibrateForXMillisec(getResources().getInteger(R.integer.vibrateLength));
+                Utility.vibrateForXMillisec(LoginActivity.this, getResources().getInteger(R.integer.vibrateLength));
                 if (loginState == false && enteredPincode.length() < 6 && !banned) {
                     enteredPincode += "9";
                     stars += "*";
@@ -271,7 +219,7 @@ public class LoginActivity extends AppCompatActivity {
         Button_0.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                vibrateForXMillisec(getResources().getInteger(R.integer.vibrateLength));
+                Utility.vibrateForXMillisec(LoginActivity.this, getResources().getInteger(R.integer.vibrateLength));
                 if (loginState == false && enteredPincode.length() < 6 && !banned) {
                     enteredPincode += "0";
                     stars += "*";
@@ -283,7 +231,7 @@ public class LoginActivity extends AppCompatActivity {
         Button_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                vibrateForXMillisec(getResources().getInteger(R.integer.vibrateLength));
+                Utility.vibrateForXMillisec(LoginActivity.this, getResources().getInteger(R.integer.vibrateLength));
                 if (loginState == false && enteredPincode.length() > 0 && !banned) {
                     enteredPincode = enteredPincode.substring(0, enteredPincode.length() - 1); // utolsó bevitt karakter törlése
                     stars = stars.substring(0, stars.length() - 1);
@@ -294,7 +242,7 @@ public class LoginActivity extends AppCompatActivity {
         Button_enter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                vibrateForXMillisec(getResources().getInteger(R.integer.vibrateLength));
+                Utility.vibrateForXMillisec(LoginActivity.this, getResources().getInteger(R.integer.vibrateLength));
                 if (!banned) {
                     if (enteredPincode.length() >= 4) { // 6--nál nagyobb nem lehet, ld: számgombok
                         if (enteredPincode.equals(storedPincode)) { // itt eredetileg ==-t írtam, de azzal nem működött:(
@@ -305,15 +253,10 @@ public class LoginActivity extends AppCompatActivity {
                             Text_View_Stars.setText(stars);
                             Text_View_Enter_PIN_Code.setVisibility(View.INVISIBLE);
                             //Button_logout.setVisibility(View.VISIBLE); // ez még a régi gomb, amit majd ki kell szednem
-
-                            SharedPreferences sp = getSharedPreferences("mentett_adatok", Context.MODE_PRIVATE);
-                            SharedPreferences.Editor editor = sp.edit();
-                            editor.putString("bejelentkezve", "igen");
-                            editor.apply();
-
+                            //setLogoutIconState(); // "kijelentkezés" ikon láthatóságának a beállítása. Utolag kiszedtem ebből az activityből a kijelentkezést
+                            Utility.setLoginState(LoginActivity.this, true); // bejelentkezve változó beállítása, mentése
                             Utility.CallNextActivity(LoginActivity.this, NetBankMainActivity.class);
                             finish(); // ez fontos, kell ide!!!
-
                         } else {
                             Text_View_Dialogue.setText(getString(R.string.text_wrong_pin_code));
                             wrongAttempts++;
@@ -339,8 +282,8 @@ public class LoginActivity extends AppCompatActivity {
         });
         Button_logout.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                vibrateForXMillisec(getResources().getInteger(R.integer.vibrateLength));
+            public void onClick(View view) { // ez a gomb már nem fog kelleni!
+                Utility.vibrateForXMillisec(LoginActivity.this, getResources().getInteger(R.integer.vibrateLength));
                 if (loginState) {
                     loginState = false;
                     Text_View_Enter_PIN_Code.setVisibility(View.VISIBLE);
@@ -350,4 +293,67 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
+
+    /**
+     * Ez a metódus tartalmaz egy visszaszámláló időzítőt, az időzítő letelte után pedig elindítja a következő activity-t.
+     * Ennél a visszaszámlálónál lehetőség lenne a visszaszámlálás alatt bizonyos időközönként elindítani valamilyen utasítást is a jelzett helyen.
+     * Ez egy absztrakt osztály !?
+     */
+    public void banned() { // x db hibás kód utáni letiltás x ideig
+        final int waitingTime = getResources().getInteger(R.integer.timeToWait);
+        banned = true;
+
+        new CountDownTimer(waitingTime*1000, 1000) { // Visszaszámlálás (absztrakt osztály)
+            public void onTick(long millisUntilFinished) { // meghatározott időközönként végrehajtódik ez a metódus
+                Text_View_Dialogue.setText(getString(R.string.text_wrong_pin_code) + " " + getString(R.string.text_banned_1) + (millisUntilFinished / 1000) + " " + getString(R.string.text_banned_2));
+            }
+            public void onFinish() { // számláló lejáratakor hajtódik végre
+                Text_View_Dialogue.setText(R.string.text_not_logged_in);
+                banned = false;
+            }
+        }.start();
+    }
+
+    /* @Override // ez sem működik :(
+    public boolean onOptionsItemSelected(MenuItem item) { // ez a pár sor is kell az AppBar visszanyílhoz,
+        switch (item.getItemId()){
+            case android.R.id.home:
+                NavUtils.navigateUpFromSameTask(this);
+                return true; //gondolom a return miatt nem kell a break
+        }
+        return super.onOptionsItemSelected(item);
+    }*/
+
+    public void init(){
+        Button_1 = (Button) findViewById(R.id.Button_1);
+        Button_2 = (Button) findViewById(R.id.Button_2);
+        Button_3 = (Button) findViewById(R.id.Button_3);
+        Button_4 = (Button) findViewById(R.id.Button_4);
+        Button_5 = (Button) findViewById(R.id.Button_5);
+        Button_6 = (Button) findViewById(R.id.Button_6);
+        Button_7 = (Button) findViewById(R.id.Button_7);
+        Button_8 = (Button) findViewById(R.id.Button_8);
+        Button_9 = (Button) findViewById(R.id.Button_9);
+        Button_0 = (Button) findViewById(R.id.Button_0);
+        Button_back = (Button) findViewById(R.id.Button_back);
+        Button_enter = (Button) findViewById(R.id.Button_enter);
+        Button_logout = (Button) findViewById(R.id.Button_logout);
+        Text_View_Enter_PIN_Code = (TextView) findViewById(R.id.Text_View_Enter_PIN_Code); //töröltem
+        Text_View_Stars = (TextView) findViewById(R.id.Text_View_Stars);
+        Text_View_Dialogue = (TextView) findViewById(R.id.Text_View_Dialogue);
+        toolbar = (Toolbar) findViewById(R.id.tool_bar);
+
+        // setTitle(R.string.app_label); // cimke frissitése. Lokalizáció miatt kell
+    }
+
+    /*public void setLogoutIconState(){ nem kell ide logout ikon
+        if (loginState){
+            menuitem_logout_2.setVisible(true);
+            menuitem_logout_2.setEnabled(true);
+        }
+        else{
+            menuitem_logout_2.setEnabled(false);
+            menuitem_logout_2.setVisible(false);
+        }
+    }*/
 }

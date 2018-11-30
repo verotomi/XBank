@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="tamas.verovszki.xbank.InformationActivity"
+    android:background="@drawable/leafbackground">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar_4"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:background="@drawable/background_darkgrey_gradient"
+        app:titleTextColor="@color/white"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+    <TextView
+        android:id="@+id/Text_View_1"
+        android:layout_below="@+id/my_toolbar_4"
+        android:textColor="@color/white"
+        android:shadowColor="@color/black"
+        android:shadowRadius="2"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:scrollbars="vertical"
+        android:padding="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</RelativeLayout>

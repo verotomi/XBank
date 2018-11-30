@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -24,25 +25,17 @@ public class NetBankMainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_net_bank_main);
 
-
-        toolbar = (Toolbar) findViewById(R.id.tool_bar);
-        setSupportActionBar(toolbar);
-
-        SharedPreferences sp = getSharedPreferences("mentett_adatok", Context.MODE_PRIVATE);
-        String loginStateisLoggedIn = sp.getString("bejelentkezve", "nem");
-        if (loginStateisLoggedIn.equals("igen")){
-            loginState = true;
-        }
-        else{
-            loginState = false;
-        }
+        init();
+        setSupportActionBar(toolbar); // Toolbar megjelenítése
+        loginState = Utility.getLoginState(NetBankMainActivity.this); // "belépve" állapot beolvasása SharedPreferencesből
+        // getSupportActionBar().setDisplayHomeAsUpEnabled(true); // visszanyíl megjelenítése a toolbarban . Ide nem kell visszanyíl. ott van a kilépés ikon!
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_netbankmainactivity, menu); // elemek hozzáadása a toolbarhoz
-
         menuitem_logout_3 = menu.findItem(R.id.logout_toolbar_icon_3);
+        loginState = Utility.getLoginState(NetBankMainActivity.this);
 
         if (loginState){
             menuitem_logout_3.setVisible(true);
@@ -52,6 +45,7 @@ public class NetBankMainActivity extends AppCompatActivity {
             menuitem_logout_3.setEnabled(false);
             menuitem_logout_3.setVisible(false);
         }
+        // Toast.makeText(this, "loginstate: " + loginState, Toast.LENGTH_SHORT).show();
         return true;
     }
 
@@ -66,13 +60,10 @@ public class NetBankMainActivity extends AppCompatActivity {
                 menuitem_logout_3.setEnabled(false);
                 menuitem_logout_3.setVisible(false);
 
-                SharedPreferences sp = getSharedPreferences("mentett_adatok", Context.MODE_PRIVATE);
-                SharedPreferences.Editor editor = sp.edit();
-                editor.putString("bejelentkezve", "nem");
-                editor.apply();
+                Utility.setLoginState(NetBankMainActivity.this, false); // elmentjük a "kilépve" állapotot SharedPrefferences-be
                 loginState = false;
 
-                Toast.makeText(this, "Vissza a főmenübe!", Toast.LENGTH_SHORT).show();
+                // Toast.makeText(this, "Vissza a főmenübe!", Toast.LENGTH_SHORT).show();
                 // Új Activity
                 Utility.CallNextActivity(NetBankMainActivity.this, MainActivity.class);
 
@@ -87,5 +78,30 @@ public class NetBankMainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    /**
+     * Toolbarban található visszanyíl kezelése
+     * @return
+     */
+    /* töröltem, merrt ide mégsem kell visszanyíl! Ha ki akarunk lépni, ott a logout ikon
+    @Override
+    public boolean onSupportNavigateUp() {
+        // ide majd kéne egy "Biztos ki akarsz lépni?" kérdés, és utána visszaa főmenübe (nem pedig a logout képernyőre)
+        if (Utility.askForConfirmExit(NetBankMainActivity.this)){
+            menuitem_logout_3.setEnabled(false);
+            menuitem_logout_3.setVisible(false);
+            Utility.setLoginState(NetBankMainActivity.this, false); // elmentjük a "kilépve" állapotot SharedPrefferences-be
+            loginState = false;
+            Toast.makeText(this, "Vissza a főmenübe!", Toast.LENGTH_SHORT).show();
+            Utility.CallNextActivity(NetBankMainActivity.this, MainActivity.class);
+            finish();
+        }
+        return true;
+        // return super.onSupportNavigateUp(); ez magától íródott be
+    }*/
+
+    public void init(){
+        toolbar = (Toolbar) findViewById(R.id.tool_bar);
     }
 }

@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="tamas.verovszki.xbank">
 
+    <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
@@ -21,11 +22,23 @@
         <activity android:name=".MainActivity" />
         <activity
             android:name=".LoginActivity"
-            android:parentActivityName=".MainActivity"></activity>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".SelectLanguageActivity"
-            android:parentActivityName=".MainActivity"></activity>
-        <activity android:name=".NetBankMainActivity"></activity>
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".NetBankMainActivity" />
+        <activity
+            android:name=".InformationActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".ExchangeRatesActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".BranchAndAtmListActivity"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".ContactActivity"
+            android:parentActivityName=".MainActivity"/>
     </application>
 
 </manifest>

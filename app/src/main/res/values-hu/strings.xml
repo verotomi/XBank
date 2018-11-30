@@ -21,5 +21,40 @@
     <string name="text_banned_1">Várnia kell "</string>
     <string name="text_banned_2"> másodpercet!"</string>
 
+    <string name="welcomeText_1">X Bank ..."</string><!-- Ez szándékosan angol! Azért van itt, hogy a sorok száma megegyezzen a 2 string erőforrásban, a könnyebb összeehasonlíthatóság miatt -->
+    <string name="welcomeText_2">... your future bank!"</string><!-- Ez szándékosan angol! Azért van itt, hogy a sorok száma megegyezzen a 2 string erőforrásban, a könnyebb összeehasonlíthatóság miatt -->
+
+    <string name="text_confirm_exit">Biztos, hogy ki akarsz lépni?"</string>
+
+    <string name="currency">Valuta"</string>
+    <string name="foreign_currency">Deviza"</string>
+    <string name="text_buy">Vétel:"</string>
+    <string name="text_sell">Eladás:"</string>
+    <string name="text_date">Dátum:"</string>
+
+    <string name="tab">\u0009\u0009\u0009\u0009</string><!-- csak így működik a tabulátor :( jelen formájában 4 karaktert ugrik-->
+
+    <string name="opening_hours">Nyitva:"</string>
+    <string name="text_branches">Bankfiókok"</string>
+    <string name="text_atms">Bankautomaták"</string>
+    <string name="atm_type">ATM típusa"</string>
+    <string name="open">Nyitva"</string>
+    <string name="closed">Zárva"</string>
+    <string name="forint">Forint"</string>
+    <string name="euro">EUR"</string>
+
+    <string name="email_us">Írjon emailt nekünk"</string>
+    <string name="email_address">info@xbank.com"</string>
+    <string name="call_us">Hívjon fel minket"</string>
+    <string name="phone_number">+36-1-123-4567"</string>
+    <string name="facebook">Nézzen meg minket Facebookon"</string>
+    <string name="facebook_address">facebook.com/xbank"</string>
+    <string name="homepage">Keresse fel weboldalunkat"</string>
+    <string name="homepage_address">www.xbank.com"</string>
+
+    <string name="text_phone_permission">Kérem engedélyezze a hozzáférést a telefon-hívásokhoz!"</string>
+
+    <string name="email_subject">Információ kérés"</string>
+    <string name="email_app_chooser_text">Válasszon alkalmazást:"</string>
 
 </resources>

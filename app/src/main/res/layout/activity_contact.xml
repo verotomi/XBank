@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="tamas.verovszki.xbank.ContactActivity"
+    android:background="@drawable/leafbackground"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar_5"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:background="@drawable/background_darkgrey_gradient"
+        app:titleTextColor="@color/white"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+    <include layout="@layout/row_item_contact_email" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="2sp"
+        android:layout_marginBottom="2sp"
+        android:background="@color/darkgreen"
+        android:layout_marginLeft="@dimen/margin_for_lines"
+        android:layout_marginRight="@dimen/margin_for_lines"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:layout_gravity="center"
+        android:background="@color/green"
+        android:layout_marginLeft="@dimen/margin_for_lines"
+        android:layout_marginRight="@dimen/margin_for_lines"
+        />
+
+    <include layout="@layout/row_item_contact_web" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="2sp"
+        android:layout_marginBottom="2sp"
+        android:background="@color/darkgreen"
+        android:layout_marginLeft="@dimen/margin_for_lines"
+        android:layout_marginRight="@dimen/margin_for_lines"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:layout_gravity="center"
+        android:background="@color/green"
+        android:layout_marginLeft="@dimen/margin_for_lines"
+        android:layout_marginRight="@dimen/margin_for_lines"
+        />
+
+    <include layout="@layout/row_item_contact_phone" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="2sp"
+        android:layout_marginBottom="2sp"
+        android:background="@color/darkgreen"
+        android:layout_marginLeft="@dimen/margin_for_lines"
+        android:layout_marginRight="@dimen/margin_for_lines"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:layout_gravity="center"
+        android:background="@color/green"
+        android:layout_marginLeft="@dimen/margin_for_lines"
+        android:layout_marginRight="@dimen/margin_for_lines"
+        />
+
+    <include layout="@layout/row_item_contact_facebook" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="2sp"
+        android:layout_marginBottom="2sp"
+        android:background="@color/darkgreen"
+        android:layout_marginLeft="@dimen/margin_for_lines"
+        android:layout_marginRight="@dimen/margin_for_lines"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:layout_gravity="center"
+        android:background="@color/green"
+        android:layout_marginLeft="@dimen/margin_for_lines"
+        android:layout_marginRight="@dimen/margin_for_lines"
+        />
+
+
+</LinearLayout>

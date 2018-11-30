@@ -5,14 +5,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".NetBankMainActivity">
 
-    <item
+    <!--kiszedtem utólag
+    item
         android:id="@+id/logout_toolbar_icon_2"
         android:orderInCategory="100"
         android:title="Logout"
         app:showAsAction="always"
         android:icon="@drawable/logout"
 
-        />
+        /-->
     <!--item
         android:id="@+id/action_search"
         android:orderInCategory="200"

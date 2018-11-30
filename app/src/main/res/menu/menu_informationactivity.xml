@@ -3,15 +3,15 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".MainActivity">
+    tools:context=".NetBankMainActivity">
 
-    <!-- item
-        android:id="@+id/logout_toolbar_icon_1"
+    <item
+        android:id="@+id/logout_toolbar_icon_4"
         android:orderInCategory="100"
         android:title="Logout"
         app:showAsAction="always"
         android:icon="@drawable/logout"
-        / -->
+        />
     <!--item
         android:id="@+id/action_search"
         android:orderInCategory="200"

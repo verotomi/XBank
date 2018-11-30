@@ -44,11 +44,7 @@ public class SelectLanguageActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 whichLanguageSelected(); // melyik nyelv lett kiválasztva? (radio-button gombok kiolvasása)
-
-                SharedPreferences sp = getSharedPreferences("mentett_adatok", Context.MODE_PRIVATE);
-                SharedPreferences.Editor editor = sp.edit();
-                editor.putString("valasztott_nyelv", selectedLanguage);
-                editor.apply();
+                saveSelectedLanguage(); // elmenti a kiválasztot nyelvet sharedPreferences-be
 
                 // Új Activity
                 Utility.CallNextActivity(SelectLanguageActivity.this, MainActivity.class);
@@ -83,7 +79,7 @@ public class SelectLanguageActivity extends AppCompatActivity {
     public void checkCorrespondingRadioButton(){
         SharedPreferences sp = getSharedPreferences("mentett_adatok", Context.MODE_PRIVATE);
         String chosenLanguage = sp.getString("valasztott_nyelv", "empty");
-        Toast.makeText(this, chosenLanguage, Toast.LENGTH_SHORT).show(); // Tesztelés után kiszedni
+        // Toast.makeText(this, chosenLanguage, Toast.LENGTH_SHORT).show(); // Tesztelés után kiszedni
         switch (chosenLanguage){
             case "hu":
                 RadioButtonHungarian.setChecked(true);
@@ -100,6 +96,13 @@ public class SelectLanguageActivity extends AppCompatActivity {
             default: // ez nem biztos hogy kell ide
                 break;
         }
+    }
+
+    public void saveSelectedLanguage(){
+        SharedPreferences sp = getSharedPreferences("mentett_adatok", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sp.edit();
+        editor.putString("valasztott_nyelv", selectedLanguage);
+        editor.apply();
     }
 
 
