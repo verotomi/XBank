@@ -48,7 +48,7 @@
                 android:layout_toRightOf="@id/contact_icon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/homepage_address"
+                android:text="@string/web_address"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
                 android:textSize="15sp"

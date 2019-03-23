@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/Navigation_Header_Layout"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark"
+    android:orientation="vertical"
+
+    android:gravity="bottom">
+
+    <RelativeLayout
+        android:id="@+id/RelLay1"
+        android:layout_width="match_parent"
+        android:layout_height="187dp"
+        android:background="?attr/colorPrimaryDark"
+        android:backgroundTint="@color/palegreen1"
+        android:padding="16dp"
+        >
+
+    <LinearLayout
+        android:id="@+id/LinLay1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="bottom">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/x_bank"
+        android:textSize="40sp"
+        android:textColor="@color/white"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+
+    <TextView
+        android:id="@+id/TextViewName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Firstname Lastname"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+    <TextView
+        android:id="@+id/TextViewLastLogin_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/last_login"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+    <TextView
+        android:id="@+id/TextViewLastLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="    2019-12-31 23:58"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_toRightOf="@id/LinLay1"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        >
+
+    <ImageView
+
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:background="@drawable/user2"/>
+    </LinearLayout>
+
+    </RelativeLayout>
+    <View
+        android:layout_below="@id/RelLay1"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@drawable/toolbar_dropshadow"/>
+
+
+</RelativeLayout>

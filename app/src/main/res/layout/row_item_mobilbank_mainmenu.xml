@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/RelLay1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/value_headerc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/buy_headerc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textStyle="bold"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/sell_headerc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_marginTop="5dp"
+                android:text=""
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/item_infoc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@android:drawable/ic_dialog_info" />
+    </RelativeLayout>
+
+    <!-- ezt a két vonalat csak akkor rakjam vissza, ha ki tudtam szedni a listview-ből a sor-elválasztó vonalat.
+    <View
+        android:id="@+id/LineDarkGreen"
+        android:layout_below="@id/RelLay1"
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="2sp"
+        android:layout_marginBottom="2sp"
+        android:background="@color/darkgreen"
+        android:layout_marginLeft="@dimen/margin_for_lines"
+        android:layout_marginRight="@dimen/margin_for_lines"/>
+
+    <View
+        android:id="@+id/LineGreen"
+        android:layout_below="@id/LineDarkGreen"
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:layout_gravity="center"
+        android:background="@color/green"
+        android:layout_marginLeft="@dimen/margin_for_lines"
+        android:layout_marginRight="@dimen/margin_for_lines"/>
+        -->
+
+
+
+
+
+
+</RelativeLayout>

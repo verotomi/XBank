@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    style="@style/BankAccountStatements_Row_Item">
+
+    <RelativeLayout
+        android:id="@+id/RalLay1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+
+        <LinearLayout
+            android:id="@+id/LinLay1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/line_a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/statement_date"
+                style="@style/BankAccountStatements_Row_Item_TextView_1"/>
+
+            <TextView
+                android:id="@+id/line_b"
+                android:layout_below="@id/line_a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2018/04"
+                style="@style/BankAccountStatements_Row_Item_TextView_2"/>
+
+            <TextView
+                android:id="@+id/line_c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/downloaded"
+                style="@style/BankAccountStatements_Row_Item_TextView_3"/>
+                android:layout_centerHorizontal="true" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LinLay2"
+            android:layout_toRightOf="@id/LinLay1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:gravity="right"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/line_d"
+                android:layout_below="@id/line_c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/download_statement"
+                style="@style/BankAccountStatements_Row_Item_TextView_4"/>
+
+            <ImageView
+                android:id="@+id/ImageView1"
+                style="@style/BankAccountStatements_Row_ImageView"
+                />
+
+            <TextView
+                android:id="@+id/line_e"
+                android:layout_below="@id/line_c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/filename"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

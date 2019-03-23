@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="tamas.verovszki.xbank.CreditCardsActivity"
+    android:background="@drawable/leafbackground30"
+    android:id="@+id/drawer_layout"
+    android:fitsSystemWindows="true">
+
+
+
+<tamas.verovszki.xbank.OnlyVerticalSwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/SwipeRefreshLayout"    >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include
+                android:id="@+id/tool_bar"
+                layout="@layout/tool_bar_2"/>
+            <View
+                android:id="@+id/shadow"
+                android:layout_below="@id/tool_bar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/toolbar_shadow_height"
+                android:background="@drawable/toolbar_dropshadow"/>
+
+            <LinearLayout
+                android:layout_below="@id/tool_bar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="1000"
+                style="@style/XBank_Frame_2">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="400">
+                    <ListView
+                        android:id="@+id/ListViewCreditCards"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/LinLaySeparator"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    style="@style/CreditCards_Divider"
+                    android:layout_gravity="center"
+                    android:visibility="invisible">
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/LinLayControls"
+                    android:layout_below="@id/ListViewCreditCards"
+                    android:layout_height="0dp"
+                    android:layout_weight="580"
+                    android:visibility="invisible"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/TextViewCardNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/card_number"
+                        style="@style/CreditCards_TextView"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        style="@style/CreditCards_LinLay">
+
+                        <TextView
+                            android:id="@+id/TextViewStatus1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/card_status"
+                            style="@style/CreditCards_Status"/>
+                        <TextView
+                            android:id="@+id/TextViewStatus2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/active"
+                            style="@style/CreditCards_Status"/>
+                        <Switch
+                            android:id="@+id/SwitchStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            style="@style/CreditCards_Switch"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        style="@style/CreditCards_LinLay">
+                        <TextView
+                            android:id="@+id/TextViewAtmLimit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/limit_atm"
+                            style="@style/CreditCards_SeekBar"
+                            />
+                        <SeekBar
+                            android:id="@+id/SeekBarAtm"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        style="@style/CreditCards_LinLay">
+                        <TextView
+                            android:id="@+id/TextViewPosLimit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/limit_pos"
+                            style="@style/CreditCards_SeekBar"
+                        />
+                        <SeekBar
+                            android:id="@+id/SeekBarPos"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        style="@style/CreditCards_LinLay">
+                        <TextView
+                            android:id="@+id/TextViewOnlineLimit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/limit_online"
+                            style="@style/CreditCards_SeekBar"
+                            />
+                        <SeekBar
+                            android:id="@+id/SeekBarOnline"
+                                android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            />
+                    </LinearLayout>
+                    <Button
+                        android:id="@+id/ButtonSubmit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_proceed"
+                        android:layout_gravity="center"
+                        style="@style/CreditCards_Button"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+</tamas.verovszki.xbank.OnlyVerticalSwipeRefreshLayout>
+
+    <!-- Container for contents of drawer - use NavigationView to make configuration easier -->
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:menu="@menu/drawer_view"
+        app:headerLayout="@layout/navigation_drawer_header"
+        android:background="@color/lightgrey1"
+        app:itemTextColor="@color/black"
+        android:theme="@style/NavigationTheme">
+
+            <include layout="@layout/navigation_drawer_header"/>
+
+    </android.support.design.widget.NavigationView>
+
+
+</android.support.v4.widget.DrawerLayout>

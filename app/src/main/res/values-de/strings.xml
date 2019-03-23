@@ -1,0 +1,426 @@
+<resources>
+
+    <string name="facebook_address">https://www.facebook.com/X-Bank-378694379633392</string>
+    <string name="facebook_address_short">facebook.com/X-Bank</string>
+    <string name="web_address">http://www.xbank.hu</string>
+    <string name="email_address">info@xbank.com</string>
+    <string name="headquarter_address">1013 Budapest, Lánchíd utca 2.</string>
+    <string name="phone_number">+36-20-289-0955</string>
+
+    <string name="app_name">X Bank</string>
+    <string name="enterToMobilbank">Mobilbank Betreten</string>
+    <string name="selectLanguage">Sprache auswählen</string>
+    <string name="branchAndAtmList">Filial- und ATM-Liste</string>
+    <string name="rateOfExchange">Wechselkurse</string>
+    <string name="contact">Kontakte</string>
+    <string name="information">Information</string>
+    <string name="text_select_language">SSprache auswählen:</string>
+    <string name="text_english">English</string>
+    <string name="text_hungarian">magyar</string>
+    <string name="text_proceed">Einreichen</string>
+
+    <string name="text_enter">Eingeben</string>
+    <string name="text_enter_pin_code">PIN-Code eingeben:</string>
+    <string name="text_enter_your_id">Geben Sie Ihre ID ein:</string>
+    <string name="text_not_logged_in">Du bist nicht eingeloggt!</string>
+    <string name="text_logged_in">Du bist eingeloggt!</string>
+    <string name="text_wrong_pin_code">Zugriff verweigert!</string>
+    <string name="text_logout">Ausloggen</string>
+    <string name="text_pin_code_rule">Der PIN-Code muss zwischen 4 und 6 Ziffern sein!</string>
+    <string name="text_id_code_rule">ID muss 8-stellig sein!</string>
+    <string name="text_banned_1">Du mußt warten "</string>
+    <string name="text_banned_2"> Sekunden!"</string>
+
+    <string name="welcomeText_1">X Bank ..."</string>
+    <string name="welcomeText_2">... your future bank!"</string>
+
+    <string name="text_confirm_exit">Möchten Sie sich wirklich abmelden?"</string>
+
+    <string name="currency">Währung"</string>
+    <string name="foreign_currency">Fremdwährung"</string>
+    <string name="text_date">Datum:"</string>
+    <string name="text_buy">Kaufen</string>
+    <string name="text_sell">Verkaufen</string>
+
+
+    <string name="tab">\u0009\u0009\u0009\u0009</string><!-- csak így működik a tabulátor :( jelen formájában 4 karaktert ugrik-->
+
+    <string name="opening_hours">Öffnungszeiten"</string>
+    <string name="text_branches">Geäst"</string>
+    <string name="text_atms">ATM-s"</string>
+    <string name="atm_type">ATM-Type"</string>
+    <string name="open">Öffnen"</string>
+    <string name="closed">Geschlossen"</string>
+    <string name="forint">Forint"</string>
+    <string name="euro">EUR"</string>
+
+    <string name="email_us">Schreiben Sie uns eine E-Mail:"</string>
+
+    <string name="call_us">Rufen Sie uns an:"</string>
+
+    <string name="facebook">Sehen Sie uns auf Facebook:"</string>
+
+    <string name="homepage">Besuchen Sie unsere Homepagee:"</string>
+
+    <string name="headquarter">Hauptquartier:"</string>
+
+
+    <string name="text_phone_permission">Bitte erteilen Sie die Erlaubnis, anzurufen!"</string>
+    <string name="email_subject">Bitte erteilen Sie die Erlaubnis, anzurufen!"</string>
+    <string name="email_app_chooser_text">Wähle eine App:"</string>
+
+    <string name="yes">Ja"</string>
+    <string name="no">Nein"</string>
+
+    <string name="monday">Montag"</string>
+    <string name="tuesday">Dienstag"</string>
+    <string name="wednesday">Dienstag"</string>
+    <string name="thursday">Donnerstag"</string>
+    <string name="friday">Freitag"</string>
+    <string name="saturday">Samstag"</string>
+    <string name="sunday">Sonntag"</string>
+
+    <string name="TitleMainmenu">Hauptmenü"</string>
+    <string name="TitleLogin">Anmeldung"</string>
+    <string name="TitleSelectLanguage">Sprachauswahl"</string>
+    <string name="TitleBranchAndAtm">Filialen und Geldautomaten"</string>
+    <string name="TitleExchangeRates">Wechselkurse"</string>
+    <string name="TitleContacts">Kontakte"</string>
+    <string name="TitleInformation">Information"</string>
+    <string name="TitleNetBankMain">Überblick</string>
+    <string name="TitleBankAccountBalance">Kontostand"</string>
+    <string name="TitleCreditcards">Kreditkarten"</string>
+    <string name="TitlePinCodeChange">PIN-Code ändern</string>
+    <string name="TitleTransferMoneyOneTime">Einmalige Übertragung</string>
+    <string name="TitleTransferMoneyRecurring">Neuer wiederkehrender Transfer</string>
+    <string name="TitleRecurringTransfers">Wiederkehrende Überweisungen</string>
+    <string name="TitleEditRecurringTransfers">Wiederkehrende Übertragung</string>
+    <string name="TitleBankAccountHistory">Kontohistorie"</string>
+    <string name="TitleBankAccountStatements">Kontoauszüge"</string>
+    <string name="TitleSavings">Ersparnisse"</string>
+    <string name="TitleSavingsNew">Neue Ersparnis"</string>
+    <string name="TitleBeneficiaries">Begünstigte"</string>
+    <string name="TitleNewBeneficiary">Neuer Begünstigter"</string>
+    <string name="TitleEditBeneficiary">Empfänger bearbeiten"</string>
+
+    <string name="SortByAddress">Nach Adresse sortieren"</string>
+    <string name="SortByDistance">Nach Entfernung sortieren"</string>
+    <string name="text_forward">Einreichen</string>
+
+    <string name="really_exit">Sie sind sicher, dass Sie beenden wollen?</string>
+    <string name="use_your_fingerprint">Oder benutzen Sie Ihren Fingerabdruck</string>
+
+    <string name="back_button_double_press">Bitte klicken Sie erneut auf BACK, um den Vorgang zu beenden!</string>
+    <string name="updated_on">Aktualisiert am</string>
+
+    <string name="refresh_rates">Aktualisierungsraten</string>
+
+    <string name="EUR">Euro</string>
+    <string name="USD">US Dollar</string>
+    <string name="GBP">Britisches Pfund</string>
+    <string name="AUD">Australischer Dollar</string>
+    <string name="BGN">Bulgarischer Lev</string>
+    <string name="CAD">Kanadischer Dollar</string>
+    <string name="CHF">Schweizerfranken</string>
+    <string name="CZK">Tschechische Krone	</string>
+    <string name="DKK">Dänische Krone</string>
+    <string name="HRK">Kroatische Kuna</string>
+    <string name="JPY">Japanische YEN</string>
+    <string name="NOK">Norwegische Kronen</string>
+    <string name="PLN">Polnischer Zloty	</string>
+    <string name="RON">Rumänischer neuer Lei</string>
+    <string name="RSD">Serbischer Dinar</string>
+    <string name="RUB">Russischer Rubel</string>
+    <string name="SEK">Schwedische Krone</string>
+
+    <string name="text_remove">Eingegebene ID entfernen?</string>
+
+    <string-array name="mobilebank_mainmenu_list">
+        <item>Balance-Abfrage</item>
+        <item>Einmalige Übertragung</item>
+        <item>Wiederkehrende Überweisungen</item>
+        <item>Ersparnisse</item>
+        <item>Kontohistorie</item>
+        <item>Kontoauszüge</item>
+        <item>Kreditkarten verwalten</item>
+        <item>PIN-Code ändern</item>
+    </string-array>
+
+    <string name="account">konto</string>
+    <string name="welcome">Herzlich willkommen</string>
+    <string name="validto">Gültig bis</string>
+
+    <string name="balance">Balance</string>
+
+    <string name="enter_current_pincode">Aktuellen PIN-Code ein:</string>
+    <string name="enter_new_pincode">Neuen PIN-Code eingeben:</string>
+    <string name="re_enter_new_pincode">Neuen PIN-Code erneut eingeben:</string>
+
+    <string name="beneficiary_name">Name des Begünstigten:</string>
+    <string name="target_account">Zielkonto:</string>
+    <string name="amount_to_be_transfered">Zu übertragender Betrag:</string>
+    <string name="comments_on_order">Kommentar zur Bestellung:</string>
+    <string name="order_date">Auftragsdatum:</string>
+    <string name="source_account">Quellkonto:</string>
+
+    <string name="transfer_ok">Überweisung erfolgreich versendet!</string>
+    <string name="transfer_not_ok">Überweisung wurde nicht erfolgreich gesendet!</string>
+    <string name="notenoughmoney">Auf diesem Konto ist nicht genug Geld!</string>
+    <string name="recurring_transfer_ok">Wiederkehrende Übertragung erfolgreich aufgezeichnet!</string>
+    <string name="recurring_transfer_not_ok">Fehler bei der Aufnahmereihenfolge!</string>
+    <string name="modification_ok">Änderung war erfolgreich!</string>
+    <string name="modification_not_ok">Die Modifikation war nicht erfolgreich!</string>
+
+    <string name="frequency_of_transfer">Übertragungshäufigkeit:</string>
+    <string name="frequency_of_transfer_day">Auf:</string>
+
+    <string-array name="recurring_transfers_frequency">
+        <item> </item>
+        <item>jeden Tag</item>
+        <item>jede Woche</item>
+        <item>jeden Monat</item>
+    </string-array>
+
+    <string-array name="recurring_transfers_days_for_weeks">
+        <item> </item>
+        <item>Montags</item>
+        <item>an Dienstagen</item>
+        <item>Mittwochs</item>
+        <item>donnerstags</item>
+        <item>freitags</item>
+        <item>samstags</item>
+        <item>Sonntags</item>
+    </string-array>
+
+    <string-array name="recurring_transfers_days_for_months">
+        <item> </item>
+        <item>am 1.</item>
+        <item>am 2.</item>
+        <item>am 3.</item>
+        <item>am 4.</item>
+        <item>am 5.</item>
+        <item>am 6.</item>
+        <item>am 7.</item>
+        <item>am 8.</item>
+        <item>am 9.</item>
+        <item>am 10.</item>
+        <item>am 11.</item>
+        <item>am 12.</item>
+        <item>am 13.</item>
+        <item>am 14.</item>
+        <item>am 15.</item>
+        <item>am 16.</item>
+        <item>am 17.</item>
+        <item>am 18.</item>
+        <item>am 19.</item>
+        <item>am 20.</item>
+        <item>am 21.</item>
+        <item>am 22.</item>
+        <item>am 23.</item>
+        <item>am 24.</item>
+        <item>am 25.</item>
+        <item>am 26.</item>
+        <item>am 27.</item>
+        <item>am 28.</item>
+        <item>am 29.</item>
+        <item>am 30.</item>
+        <item>am 31.</item>
+    </string-array>
+
+    <string-array name="recurring_transfers_days_empty">
+        <item> </item>
+    </string-array>
+
+    <string name="name_of_recurring_transfer">Name der wiederkehrenden Überweisung:</string>
+
+    <string name="active">Aktiv</string>
+    <string name="inactive">Inaktiv</string>
+
+    <string name="Balance_query">Balance-Abfrage</string>
+    <string name="One_time_transfer">Einmalige Übertragung</string>
+    <string name="Recurring_transfers">Wiederkehrende Überweisungen</string>
+    <string name="Savings">Ersparnisse</string>
+    <string name="Account_history">Kontohistorie</string>
+    <string name="Account_statements">Kontoauszüge</string>
+    <string name="Beneficiaries">Begünstigte"</string>
+    <string name="Manage_credit_cards">Kreditkarten verwalten</string>
+    <string name="Change_PIN_code">PIN-Code ändern</string>
+    <string name="last_login">Letzte Anmeldung:</string>
+    <string name="no_internet_connection">Es gibt keine Internetverbindung!</string>
+    <string name="no_active_account">Du hast kein aktives Bankkonto!</string>
+    <string name="delete_statement">Anweisung vom Telefon löschen?</string>
+    <string name="statement_deleted">Statement gelöscht!</string>
+    <string name="download_completed">Download abgeschlossen</string>
+    <string name="security_timeout_expired">Sicherheits-Timeout ist abgelaufen!</string>
+    <string name="want_to_prolong">Möchten Sie verlängern?</string>
+    <string name="delete_beneficiary">Möchten Sie den Begünstigten löschen?</string>
+    <string name="template_name_needed">Der Name der Vorlage ist obligatorisch!</string>
+    <string name="beneficiary_name_needed">Name des Begünstigten ist obligatorisch!</string>
+    <string name="rule_account_number">Kontonummer besteht aus 2x8 oder 3x8 Ziffern!!</string>
+    <string name="record_successful">Erfolgreiche Aufnahme!</string>
+    <string name="distance_data_updated">Entfernungsdaten aktualisiert!</string>
+    <string name="card">Karte</string>
+    <string name="card_status">Status der Karte:</string>
+    <string name="forint_short">Ft</string>
+    <string name="limit_atm">Atm limit:</string>
+    <string name="limit_pos">Pos limit:</string>
+    <string name="limit_online">Online-limit:</string>
+    <string name="no_creditcard">Sie haben keine Kreditkarte!!</string>
+    <string name="open_statement">Anweisung anzeigen</string>
+    <string name="downloaded">Heruntergeladen</string>
+    <string name="not_downloaded">Nicht heruntergeladen</string>
+    <string name="download_statement">Erklärung herunterladen</string>
+    <string name="recurring_transfer_name_needed">Wiederkehrender Transfername ist zwingend erforderlich!</string>
+    <string name="amount_needed">Betrag muss gefüllt werden!</string>
+    <string name="rule_max_amount">Maximal zu übertragender Betrag ist 1 Milliarde Einheiten!</string>
+    <string name="rule_min_amount">Mindestbetrag für die Überweisung ist 1 Einheit!</string>
+    <string name="choose_period">Wählen Sie einen Zeitraum aus!</string>
+    <string name="choose_day">Wähle einen Tag</string>
+    <string name="no_bank_account">Sie haben kein aktives Bankkonto!</string>
+    <string name="exchange_rates_refreshed">Wechselkurse wurden aktualisiert!</string>
+    <string name="authentication_failed">Authentifizierung fehlgeschlagen</string>
+    <string name="authentication_help">Hilfe zur Authentifizierung</string>
+    <string name="fingerprint_authorized">Fingerabdruck autorisiert!</string>
+    <string name="copyright_vt">© 2019 - Verovszki Tamás</string>
+    <string name="information_text_1">1. Kurze Beschreibung:  ...</string>
+    <string name="information_text_2">2. Langbeschreibung:  ...</string>
+    <string name="expire">Verfallen:</string>
+    <string name="rate">Bewertung:</string>
+    <string name="lockup_amount">Eingespeicherter Betrag:</string>
+    <string name="pincode_mismatch">PIN-Codes sind nicht identisch!</string>
+    <string name="pincode_changed_succesfully">Pincode erfolgreich geändert!</string>
+    <string name="delete_order">Diese Bestellung löschen?</string>
+    <string name="no_active_savings">Sie haben keine aktiven Einsparungen!</string>
+    <string name="deposit_breaked">Einzahlung erfolgreich gebrochen!</string>
+    <string name="deposit_break_unsuccessful">Einzahlungsbruch war nicht erfolgreich!</string>
+    <string name="break_deposit">Diese Ersparnis bremsen?</string>
+    <string name="days">Tage</string>
+    <string name="new_saving_successful">Neues Speichern erfolgreich bestellt!</string>
+    <string name="no_location_permission">Aufgrund fehlender Berechtigung werden Entfernungsdaten nicht angezeigt</string>
+    <string name="read_error">Lese fehler!</string>
+    <string name="no_specie">Keine Arten können mit Forints verwendet werden!</string>
+    <string name="new_beneficiary">Neuer Begünstigter</string>
+    <string name="account_details">Kontodetails</string>
+    <string name="account_owner">Kontodetails:</string>
+    <string name="account_number">Kontonummer:</string>
+    <string name="account_type">Konto Typ:</string>
+    <string name="current_balance">Aktueller Kontostand:</string>
+    <string name="account_status">Kontostatus:</string>
+    <string name="account_open_time">Konto eröffnet am:</string>
+    <string name="from">Von</string>
+    <string name="to">Zu</string>
+    <string name="withdrawals">Abhebungen</string>
+    <string name="deposits">Einlagen</string>
+    <string name="empty_list">Die Liste ist leer!</string>
+    <string name="template_name">Name der Vorlage:</string>
+    <string name="card_number">Kartennummer:</string>
+    <string name="status">Status</string>
+    <string name="edit">Bearbeiten</string>
+    <string name="x_bank_version">X Bank - mobilebank Anwendung Version: 0.2.1</string>
+    <string name="active_accounts">Aktive Bankkonten:</string>
+    <string name="creditcards">Kreditkarten:</string>
+    <string name="saving_details">Speichern der Details</string>
+    <string name="saving_type">Speichertyp:</string>
+    <string name="expire_date">Ablaufdatum:</string>
+    <string name="saving_status">Status wird gespeichert:</string>
+    <string name="reference_number">Referenznummer:</string>
+    <string name="maturity_amount">Reifezeit:</string>
+    <string name="saving_date">Sperrdatum:</string>
+    <string name="deutsch">Deutsch</string>
+    <string name="transaction_details">Transaktionsdetails</string>
+    <string name="transaction_type">Art der Transaktion:</string>
+    <string name="direction">Richtung:</string>
+    <string name="amount">Menge</string>
+    <string name="amount_2">Menge:</string>
+    <string name="partner_name">Name des Partners:</string>
+    <string name="partner_number">Kontonumber des Partners:</string>
+    <string name="comment">Kommentar:</string>
+    <string name="arrived_on">Angekommen um:</string>
+    <string name="save_template">Speichern</string>
+    <string name="x_bank">X Bank</string>
+    <string name="statement_date">Datum der Erklärung:</string>
+    <string name="filename">Dateiname</string>
+    <string name="valid">Gültig :</string>
+    <string name="new_one_time_ransfer">Neuer einmaliger Transfer</string>
+    <string name="new_recurring_transfer">Neuer wiederkehrender Transfer</string>
+    <string name="new_saving">Neue Ersparnis</string>
+    <string name="detailed_informations">Ausführliche Informationen</string>
+
+    <string name="retail_bank_account">Privatkundenkonto</string>
+    <string name="saving_account">Konto speichern</string>
+    <string name="foreign_currency_account">Fremdwährungskonto</string>
+    <string name="breaked">Abgebrochen</string>
+    <string name="expired">abgelaufen</string>
+    <string name="yearly_saving">Jährliche Einsparung</string>
+    <string name="monthly_saving">Monatliches Einsparung</string>
+    <string name="weekly_saving">Wöchentliche Einsparung</string>
+    <string name="quarterly_saving">Vierteljährliche  Einsparung</string>
+    <string name="every_day">Jeden Tag</string>
+    <string name="every_week">Jeden Woche</string>
+    <string name="every_month">Jeden Monat</string>
+    <string name="on_mondays">montags"</string>
+    <string name="on_tuesdays">dienstags"</string>
+    <string name="on_wednesdays">mittwochs"</string>
+    <string name="on_thursdays">donnerstags"</string>
+    <string name="on_fridays">freitags"</string>
+    <string name="on_saturdays">an Samstagen"</string>
+    <string name="on_sundays">sonntags"</string>
+    <string name="on_first">am 1.</string>
+    <string name="on_second">am 2.</string>
+    <string name="on_third">am 3.</string>
+    <string name="on_fourth">am 4.</string>
+    <string name="on_fifth">am 5.</string>
+    <string name="on_sixth">am 6.</string>
+    <string name="on_seventh">am 7.</string>
+    <string name="on_eighth">am 8.</string>
+    <string name="on_nineth">am 9.</string>
+    <string name="on_tenth">am 10.</string>
+    <string name="on_eleventh">am 11.</string>
+    <string name="on_twelveth">am 12.</string>
+    <string name="on_thirteenth">am 13.</string>
+    <string name="on_fourteenth">am 14.</string>
+    <string name="on_fifteenth">am 15.</string>
+    <string name="on_sixteenth">am 16.</string>
+    <string name="on_seventeenth">am 17.</string>
+    <string name="on_eighteenth">am 18.</string>
+    <string name="on_nineteenth">am 19.</string>
+    <string name="on_twentieth">am 20.</string>
+    <string name="on_twenty_first">am 21.</string>
+    <string name="on_twenty_second">am 22.</string>
+    <string name="on_twenty_third">am 23.</string>
+    <string name="on_twenty_fourth">am 24.</string>
+    <string name="on_twenty_fifth">am 25.</string>
+    <string name="on_twenty_sixth">am 26.</string>
+    <string name="on_twenty_seventh">27.</string>
+    <string name="on_twenty_eighth">am 28.</string>
+    <string name="on_twenty_nineth">am 29.</string>
+    <string name="on_thirtieth">am 30.</string>
+    <string name="on_thirty_first">am 31.</string>
+    <string name="account_open">Konto eröffnetn</string>
+    <string name="deposit">Einzahlung </string>
+    <string name="saving">Ersparnisse</string>
+    <string name="withdrawal">Rücktritt</string>
+    <string name="transfer_fee">Überweisungsgebühr</string>
+    <string name="early_withdrawal">Vorbezug</string>
+    <string name="fund_withdrawal">Fondsabhebung</string>
+    <string name="interest_withdrawal">Zinsentzug</string>
+    <string name="recurring_transfer">Wiederkehrende Übertragung</string>
+    <string name="recurring_transfer_fee">Wiederkehrende Überweisungsgebühr</string>
+    <string name="not_initialized">nicht initialisiert</string>
+    <string name="monthly_fee">Monatsgebühr</string>
+    <string name="incoming_transfer">Eingehende Überweisung</string>
+    <string name="outgoing_transfer">ausgehende Überweisung</string>
+    <string name="purchase_with_credit_card">Kauf mit Kreditkarte</string>
+    <string name="Savings_2">Ersparnisse:</string>
+    <string name="name">Name:</string>
+    <string name="overview">Overview</string>
+    <string name="comment_monthly_fee">Monatsgebühr</string>
+    <string name="comment_early_withdrawal">Vorbezug</string>
+    <string name="comment_random_comment">Zufälliger Kommentar</string>
+    <string name="comment_account_opening">Kontoeröffnung</string>
+    <string name="comment_fund_withdrawal">Geldabhebung</string>
+    <string name="comment_interest_withdrawal">Zinsentzug</string>
+    <string name="comment_saving">Speichern</string>
+    <string name="creditcard_modified_succesfully">Kreditkartendaten wurden geändert!</string>
+
+</resources>

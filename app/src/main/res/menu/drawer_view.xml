@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <group android:checkableBehavior="single"
+        android:id="@+id/im">
+        <item
+            android:id="@+id/Overviewe"
+            android:title="@string/overview"
+            android:icon="@drawable/money"/>
+    </group>
+    <group android:checkableBehavior="single"
+        android:id="@+id/i0">
+        <item
+            android:id="@+id/Balance_query"
+            android:title="@string/Balance_query"
+            android:icon="@drawable/money"/>
+    </group>
+    <group android:checkableBehavior="single"
+        android:id="@+id/i1">
+        <item
+            android:id="@+id/One_time_transfer"
+            android:title="@string/One_time_transfer"
+            android:icon="@drawable/transfer"/>
+    </group>
+    <group android:checkableBehavior="single"
+        android:id="@+id/i2">
+        <item
+            android:id="@+id/Recurring_transfers"
+            android:title="@string/Recurring_transfers"
+            android:icon="@drawable/recurring2"/>
+    </group>
+    <group android:checkableBehavior="single"
+        android:id="@+id/i3">
+        <item
+            android:id="@+id/Savings"
+            android:title="@string/Savings"
+            android:icon="@drawable/saving2"/>
+    </group>
+    <group android:checkableBehavior="single"
+        android:id="@+id/i4">
+        <item
+            android:id="@+id/Account_history"
+            android:title="@string/Account_history"
+            android:icon="@drawable/history1"/>
+    </group>
+    <group android:checkableBehavior="single"
+        android:id="@+id/i5">
+        <item
+            android:id="@+id/Account_statement_download"
+            android:title="@string/Account_statements"
+            android:icon="@drawable/bankaccountstatement"/>
+    </group>
+    <group android:checkableBehavior="single"
+        android:id="@+id/i7">
+        <item
+            android:id="@+id/Beneficiaries"
+            android:title="@string/Beneficiaries"
+            android:icon="@drawable/beneficiary3"/>
+    </group>
+    <group android:checkableBehavior="single"
+        android:id="@+id/i6">
+        <item
+            android:id="@+id/Manage_credit_cards"
+            android:title="@string/Manage_credit_cards"
+            android:icon="@drawable/creditcard2b"/>
+    </group>
+    <group android:checkableBehavior="single"
+        android:id="@+id/i8">
+        <item
+            android:id="@+id/Change_PIN_code"
+            android:title="@string/Change_PIN_code"
+            android:icon="@drawable/pincode1"/>
+    </group>
+    <group android:checkableBehavior="single"
+        android:id="@+id/i10">
+        <item
+            android:id="@+id/Logout"
+            android:title="@string/text_logout"
+            android:icon="@drawable/logout2"/>
+    </group>
+    <group android:checkableBehavior="none"
+        android:id="@+id/i9"
+        android:enabled="false">
+        <item
+            android:id="@+id/empty"
+            android:title="" />
+    </group>
+</menu>

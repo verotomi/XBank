@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="tamas.verovszki.xbank.MobilBankMainActivity"
+    android:background="@drawable/leafbackground30"
+    android:id="@+id/drawer_layout"
+    android:fitsSystemWindows="true">
+
+    <tamas.verovszki.xbank.OnlyVerticalSwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/SwipeRefreshLayout"
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/tool_bar"
+            layout="@layout/tool_bar_2"/>
+        <View
+            android:id="@+id/ToolbarShadow"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_shadow_height"
+            android:background="@drawable/toolbar_dropshadow"/>
+
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_below="@id/tool_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/XBank_Frame_1"
+            >
+
+            <LinearLayout
+                android:id="@+id/LinLay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/ConstLay1"
+                    android:layout_below="@+id/tool_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/TextViewBankAccounts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/active_accounts"
+                        style="@style/MobilBankMain_TextView"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        app:layout_constraintEnd_toStartOf="@+id/imageView2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:visibility="visible"/>
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        style="@style/MobilBankMain_ImageView"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/money2"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <tamas.verovszki.xbank.NonScrollListView
+                        android:id="@+id/ListViewBankAccounts"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/MobilBankMain_ListView"
+                        android:layout_below="@+id/TextViewBankAccounts"
+                        app:layout_constraintEnd_toStartOf="@+id/imageView2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/TextViewBankAccounts" />
+
+                    <TextView
+                        android:id="@+id/TextViewEmptyList1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/no_active_account"
+                        style="@style/MobilBankMain_TextView_Empty"
+                        android:visibility="invisible"
+                        app:layout_constraintEnd_toEndOf="@+id/ListViewBankAccounts"
+                        app:layout_constraintStart_toStartOf="@+id/ListViewBankAccounts"
+                        app:layout_constraintTop_toTopOf="@+id/ListViewBankAccounts" />
+
+                </android.support.constraint.ConstraintLayout>
+
+                <LinearLayout
+                    android:id="@+id/Divider_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_1_height"
+                    android:orientation="horizontal"
+                    style="@style/MobilBankMain_Divider"
+                    >
+
+                </LinearLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/ConstLay2"
+                    android:layout_below="@+id/tool_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/TextViewSavings"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/MobilBankMain_TextView"
+                        android:layout_alignParentTop="true"
+                        android:text="@string/Savings_2"
+                        app:layout_constraintEnd_toStartOf="@+id/imageView3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:visibility="visible"/>
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        style="@style/MobilBankMain_ImageView"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/saving2"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <tamas.verovszki.xbank.NonScrollListView
+                        android:id="@+id/ListViewSavings"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/MobilBankMain_ListView"
+                        app:layout_constraintEnd_toStartOf="@+id/imageView3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/TextViewSavings" />
+
+                    <TextView
+                        android:id="@+id/TextViewEmptyList2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/no_active_savings"
+                        style="@style/MobilBankMain_TextView_Empty"
+                        android:visibility="invisible"
+                        app:layout_constraintEnd_toEndOf="@+id/ListViewSavings"
+                        app:layout_constraintStart_toStartOf="@+id/ListViewSavings"
+                        app:layout_constraintTop_toTopOf="@+id/ListViewSavings" />
+
+                </android.support.constraint.ConstraintLayout>
+
+                <LinearLayout
+                    android:id="@+id/Divider_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_1_height"
+                    android:orientation="horizontal"
+                    style="@style/MobilBankMain_Divider"
+                    >
+
+                </LinearLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/ConstLay3"
+                    android:layout_below="@+id/tool_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/TextViewCreditCards"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/MobilBankMain_TextView"
+                        android:text="@string/creditcards"
+                        app:layout_constraintEnd_toStartOf="@+id/imageView4"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:visibility="visible"/>
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        style="@style/MobilBankMain_ImageView"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/creditcard1"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <tamas.verovszki.xbank.NonScrollListView
+                        android:id="@+id/ListViewCreditCards"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/MobilBankMain_ListView"
+                        app:layout_constraintEnd_toStartOf="@+id/imageView4"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/TextViewCreditCards" />
+
+                    <TextView
+                        android:id="@+id/TextViewEmptyList3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/MobilBankMain_TextView_Empty"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/no_creditcard"
+                        android:visibility="invisible"
+                        app:layout_constraintEnd_toEndOf="@+id/ListViewCreditCards"
+                        app:layout_constraintStart_toStartOf="@+id/ListViewCreditCards"
+                        app:layout_constraintTop_toTopOf="@+id/ListViewCreditCards" />
+
+                </android.support.constraint.ConstraintLayout>
+
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+
+    </LinearLayout>
+
+    </tamas.verovszki.xbank.OnlyVerticalSwipeRefreshLayout>
+
+        <!-- Container for contents of drawer - use NavigationView to make configuration easier -->
+        <android.support.design.widget.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true"
+            app:menu="@menu/drawer_view"
+            app:headerLayout="@layout/navigation_drawer_header"
+            android:background="@color/lightgrey1"
+            app:itemTextColor="@color/black"
+            android:theme="@style/NavigationTheme">
+
+            <include layout="@layout/navigation_drawer_header"/>
+
+        </android.support.design.widget.NavigationView>
+
+
+</android.support.v4.widget.DrawerLayout>
+

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BankAccountDetailsActivity"
+    android:background="@drawable/dialog_custom_layout_green"
+
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/TextViewHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:text="@string/account_details"
+        style="@style/DetailsViews_Header"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/palegrey1">
+
+        <View android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_shadow_height"
+            android:background="@drawable/toolbar_dropshadow"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            style="@style/XBank_Frame_3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/TextViewNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/DetailsViews_TextView_1"
+                android:text="@string/account_number"/>
+            <TextView
+                android:id="@+id/TextViewNumber2"
+
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/DetailsViews_TextView_2c"
+
+            android:text="12345678-90123456-78901234"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            style="@style/DetailsViews_Divider"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/TextViewOwner"
+
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/DetailsViews_TextView_1"
+                android:text="@string/account_owner"/>
+
+
+            <TextView
+                android:id="@+id/TextViewOwner2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/DetailsViews_TextView_2a"
+                android:text="Lastname Firstname"/>
+
+        </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                style="@style/DetailsViews_Divider"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/TextViewType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/DetailsViews_TextView_1"
+                android:text="@string/account_type"/>
+
+            <TextView
+                android:id="@+id/TextViewType2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/DetailsViews_TextView_2a"
+                android:text="Lakossági folyószámla"/>
+
+        </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                style="@style/DetailsViews_Divider"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/TextViewBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                style="@style/DetailsViews_TextView_1"
+                android:text="@string/current_balance"/>
+
+            <TextView
+                android:id="@+id/TextViewBalance2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/DetailsViews_TextView_2a"
+                android:text="1.000.000"/>
+
+            <TextView
+                android:id="@+id/TextViewCurrency2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/DetailsViews_TextView_2b"
+                android:text="@string/forint"/>
+
+        </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                style="@style/DetailsViews_Divider"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/TextViewStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/DetailsViews_TextView_1"
+                android:text="@string/account_status"/>
+
+            <TextView
+                android:id="@+id/TextViewStatus2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/DetailsViews_TextView_2a"
+                android:text="@string/active"/>
+
+        </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                style="@style/DetailsViews_Divider"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/TextViewOpened"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/DetailsViews_TextView_1"
+                android:text="@string/account_open_time"/>
+
+            <TextView
+                android:id="@+id/TextViewOpened2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/DetailsViews_TextView_2a"
+                android:text="2019-12-31"/>
+
+        </LinearLayout>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

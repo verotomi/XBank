@@ -3,41 +3,32 @@ package tamas.verovszki.xbank;
 
 public class DataModelCurrencies {
 
+    private int id;
+    private String currency;
+    private double buy;
+    private double sell;
+    private String validfrom;
 
-
-    String currency;
-    String buy;
-    String sell;
-    String date;
-
-
-
-    public DataModelCurrencies(String currency, String buy, String sell, String date ) {
+    public DataModelCurrencies( int id, String currency, Double buy, Double sell, String validfrom) {
         this.currency=currency;
         this.buy=buy;
         this.sell=sell;
-        this.date=date;
-
+        this.validfrom = validfrom;
     }
 
-
-    public String getBuy() {
+    public int getId() {
+        return id;
+    }
+    public Double getBuy() {
         return buy;
     }
-
-
-    public String getSell() {
+    public Double getSell() {
         return sell;
     }
-
-
     public String getCurrency() {
         return currency;
     }
-
-
-    public String getDate() {
-        return date;
+    public String getValidfrom() {
+        return validfrom;
     }
-
 }

@@ -1,17 +1,28 @@
 package tamas.verovszki.xbank;
 
 import android.content.Context;
+import android.content.SharedPreferences;
+import android.database.Cursor;
+import android.location.Location;
+import android.location.LocationManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Switch;
+import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.IllegalFormatCodePointException;
 
 
 /**
@@ -22,7 +33,8 @@ import java.util.ArrayList;
  * Use the {@link Tab1Branches#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class Tab1Branches extends Fragment {
+public class
+Tab1Branches extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -32,6 +44,10 @@ public class Tab1Branches extends Fragment {
     ArrayList<DataModelBranches> dataModels;
     ListView listView;
     private static CustomAdapterBranches adapter2;
+
+    // adatbázishoz kell
+    private DatabaseHelper db;
+
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -81,43 +97,42 @@ public class Tab1Branches extends Fragment {
 
 
         dataModels= new ArrayList<>();
-        dataModels.add(new DataModelBranches("1011 Budapest", "Deák tér 1.", "1km",getString(R.string.open)));
-        dataModels.add(new DataModelBranches("1025 Budapest", "Makó tér 6.", "2km",getString(R.string.open)));
-        dataModels.add(new DataModelBranches("1032 Budapest", "Damjanich utca 27.", "3km",getString(R.string.open)));
-        dataModels.add(new DataModelBranches("1041 Budapest", "Koller Tivadar utca 61.", "5km",getString(R.string.open)));
-        dataModels.add(new DataModelBranches("1052 Budapest", "Bokody Dezső tér 2.", "8km",getString(R.string.open)));
-        dataModels.add(new DataModelBranches("1086 Budapest", "Pallagi utca 7.", "10km",getString(R.string.open)));
-        dataModels.add(new DataModelBranches("1133 Budapest", "Kossuth Lajos út 111.", "11km",getString(R.string.open)));
-        dataModels.add(new DataModelBranches("1211 Budapest", "Márvány utca 62.", "12km",getString(R.string.closed)));
-        dataModels.add(new DataModelBranches("1072 Budapest", "Sárgarózsa utca 88.", "15km",getString(R.string.open)));
-        dataModels.add(new DataModelBranches("1165 Budapest", "Semmelweiss utca 5/b.", "17km",getString(R.string.closed)));
-        dataModels.add(new DataModelBranches("1182 Budapest", "Rózsa utca 92.", "18km",getString(R.string.open)));
-        dataModels.add(new DataModelBranches("1217 Budapest", "Tél tér 13.", "19km",getString(R.string.closed)));
-        dataModels.add(new DataModelBranches("1144 Budapest", "Koppány utca 47.", "22km",getString(R.string.open)));
-        dataModels.add(new DataModelBranches("1152 Budapest", "Nemecsek utca 55.", "25km",getString(R.string.open)));
-        dataModels.add(new DataModelBranches("1044 Budapest", "Barta Béla utca 8.", "25km",getString(R.string.open)));
-        dataModels.add(new DataModelBranches("1191 Budapest", "Badacsonyi utca 56.", "28km",getString(R.string.closed)));
-        dataModels.add(new DataModelBranches("2120 Dunakeszi", "Fő utca 10.", "32km",getString(R.string.open)));
 
-        /* Adatszerkezet-átalakítás miatt kicsillagoztam a régi sazerkezetet. Hátha valamelyik adat még kelleni fog
-        dataModels.add(new DataModelBranches("Központi fiók", "1011 Budapest, Deák tér 1.", "1km","H-P: 8:00-16:00"));
-        dataModels.add(new DataModelBranches("12. számú fiók", "1025 Budapest, Makó tér 6.", "2km","H-P: 8:00-17:00"));
-        dataModels.add(new DataModelBranches("2. számú fiók", "1032 Budapest, Damjanich utca 27.", "3km","H-P: 9:00-18:00"));
-        dataModels.add(new DataModelBranches("3. számú fiók", "1041 Budapest, Koller Tivadar utca 61.", "5km","H-P: 8:00-15:00"));
-        dataModels.add(new DataModelBranches("14. számú fiók", "1052 Budapest, Bokody Dezső tér 2.", "8km","H-P: 8:00-17:00"));
-        dataModels.add(new DataModelBranches("5. számú fiók", "1086 Budapest, Pallagi utca 7.", "10km","H-P: 8:00-17:00"));
-        dataModels.add(new DataModelBranches("18. számú fiók", "1133 Budapest, Kossuth Lajos út 111.", "11km","H-P: 8:00-17:00"));
-        dataModels.add(new DataModelBranches("11. számú fiók", "1211 Budapest, Márvány utca 62.", "12km","H-P: 8:00-19:00"));
-        dataModels.add(new DataModelBranches("1. számú fiók", "1072 Budapest, Sárgarózsa utca 88.", "15km","H-P: 8:00-17:00"));
-        dataModels.add(new DataModelBranches("4. számú fiók", "1165 Budapest, Semmelweiss utca 5/b.", "17km","H-P: 9:00-20:00"));
-        dataModels.add(new DataModelBranches("15. számú fiók", "1182 Budapest, Rózsa utca 92.", "18km","H-P: 8:00-17:00"));
-        dataModels.add(new DataModelBranches("8. számú fiók", "1217 Budapest, Tél tér 13.", "19km","H-P: 8:00-17:00"));
-        dataModels.add(new DataModelBranches("22. számú fiók", "1144 Budapest, Koppány utca 47.", "22km","H-P: 8:00-17:00"));
-        dataModels.add(new DataModelBranches("25. számú fiók", "1152 Budapest, Nemecsek utca 55.", "25km","H-P: 8:00-17:00"));
-        dataModels.add(new DataModelBranches("26. számú fiók", "1044 Budapest, Barta Béla utca 8.", "25km","H-P: 8:00-17:00"));
-        dataModels.add(new DataModelBranches("32. számú fiók", "1191 Budapest, Badacsonyi utca 56.", "28km","H-P: 8:00-17:00"));
-        dataModels.add(new DataModelBranches("40. számú fiók", "2120 Dunakeszi, Fő utca 10.", "32km","H-P: 8:00-17:00"));*/
+        db = new DatabaseHelper(getContext());
+        Cursor eredmeny = db.adatLekerdezesBranches();
+        //stringbuffer = hosszú string amihez hozzá fűzzük (appendeljük) a változókat
+        StringBuffer stringBuffer = new StringBuffer();
 
+        if (eredmeny!=null && eredmeny.getCount()>0)
+        {
+            while(eredmeny.moveToNext()) {
+                dataModels.add(new DataModelBranches(eredmeny.getString(1) + " " + eredmeny.getString(2), eredmeny.getString(3), Double.parseDouble(eredmeny.getString(4)), Double.parseDouble(eredmeny.getString(5)), eredmeny.getString(6), eredmeny.getString(7), eredmeny.getString(8), eredmeny.getString(9), eredmeny.getString(10), eredmeny.getString(11), eredmeny.getString(12)));
+            }
+        }else
+        {
+            Toast.makeText(getContext(), R.string.read_error, Toast.LENGTH_SHORT).show();
+        }
+
+        SharedPreferences sp = getContext().getSharedPreferences(Constants.SHAREDPREFERENCES_FILE_NAME, Context.MODE_PRIVATE);
+        String orderType = sp.getString(Constants.SHAREDPREFERENCES_BRANCHES_AND_ATMS_ORDER_TYPE, "address");
+        switch (orderType){
+            case "address":
+                //Toast.makeText(getContext(), "Fiok cim", Toast.LENGTH_SHORT).show();
+                Collections.sort(dataModels, new Comparator<DataModelBranches>() { // lista sorbarendezése cím szerint (utcanév és házszám nincs figyelve, csak az irszám + város)
+                    public int compare(DataModelBranches obj1, DataModelBranches o2) {
+                        return obj1.getAddress1().compareTo(o2.getAddress1());
+                    }
+                });
+                break;
+            case "distance":
+                //Toast.makeText(getContext(), "Fiok táv", Toast.LENGTH_SHORT).show();
+                Collections.sort(dataModels, new Comparator<DataModelBranches>() { // lista sorbarendezése a jelenlegi pozíciónktól való távolság szerint
+                    public int compare(DataModelBranches obj1, DataModelBranches o2) {
+                        return obj1.getDistance(getContext()).compareTo(o2.getDistance(getContext()));
+                    }
+                });
+                break;
+        }
 
         adapter2 = new CustomAdapterBranches(dataModels, getActivity().getApplicationContext()); // itt a getactivity() azért kell, mert fragment-ben vagyunk, nem activityben
 
@@ -128,12 +143,48 @@ public class Tab1Branches extends Fragment {
 
                 DataModelBranches dModel= dataModels.get(position);
 
+                /*String isOpen; // ez csak anyit írt ki, hogy nyitva vagy zárva. kibővítettem!
+                if (dModel.getOpen()){
+                    isOpen = getContext().getResources().getString(R.string.open);
+                }
+                else{
+                    isOpen = getContext().getResources().getString(R.string.closed);
+                }*/
+
                 Snackbar.make(view,
                         //getString(R.string.opening_hours) +
-                        dModel.getOpen(), Snackbar.LENGTH_LONG)
+                            getString(R.string.opening_hours) + ": \n" +
+                                    getString(R.string.monday) + ":\t " +dModel.getOpeningTimeMonday() + "\n" +
+                                    getString(R.string.tuesday) + ":\t " +dModel.getOpeningTimeTuesday() + "\n" +
+                                    getString(R.string.wednesday) + ":\t " +dModel.getOpeningTimeWednesday() + "\n" +
+                                    getString(R.string.thursday) + ":\t " +dModel.getOpeningTimeThursday() + "\n" +
+                                    getString(R.string.friday) + ":\t " +dModel.getOpeningTimeFriday() + "\n" +
+                                    getString(R.string.saturday) + ":\t " +dModel.getOpeningTimeSaturday() + "\n" +
+                                    getString(R.string.sunday) + ":\t " +dModel.getOpeningTimeSunday()
+                                // be kellett hozzá állítani a Snackbar maximális sorok számát a values.xml-ben!!
+                        , Snackbar.LENGTH_LONG)
                         .setAction("No action", null).show();
             }
         });
+
+        /**
+         * (Többek között) ez kell ahhoz, hogy a listview-ekben működjön együtt a felfele görgetés és a lehúzásos frissítés
+         *  Lényegében akkor teszi aktivvá a lehúzható frissítést, ha a felfele görgetés során elértük a lista legtetejét
+         */
+        listView.setOnScrollListener(new AbsListView.OnScrollListener() {
+            @Override
+            public void onScrollStateChanged(AbsListView absListView, int i) {
+
+            }
+
+            @Override
+            public void onScroll(AbsListView absListView, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
+                SwipeRefreshLayout swipeRefreshLayout = ((BranchAndAtmListActivity) getContext()).findViewById(R.id.SwipeRefreshLayout);
+                int topRowVerticalPosition = (listView == null || listView.getChildCount() == 0) ? 0 : listView.getChildAt(0).getTop();
+                swipeRefreshLayout.setEnabled(firstVisibleItem == 0 && topRowVerticalPosition >= 0);
+            }
+        });
+
         return view;
         // fragment-ben megjelenítendő rész vége
     }
@@ -176,4 +227,6 @@ public class Tab1Branches extends Fragment {
         // TODO: Update argument type and name
         void onBFragmentInteraction(Uri uri);
     }
+
+
 }

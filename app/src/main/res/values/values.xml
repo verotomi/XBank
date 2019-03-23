@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="design_snackbar_text_max_lines">8</integer> <!-- snackbar max. sorok száma!-->
+    <integer name="auto_logout_time">300</integer> <!-- in seconds-->
+    <!--item name="spinner_arrow_opacity" format="float" type="dimen">0.10</item átraktam a dimens.xml-be-->
+    <integer name="editTextBeneficiaryName_max_length">65</integer>
+    <integer name="editTextRecurringTransferName_max_length">32</integer>
+    <integer name="accountNumber_max_length">26</integer>
+</resources>

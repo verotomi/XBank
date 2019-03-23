@@ -3,12 +3,12 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".NetBankMainActivity">
+    tools:context=".MobilBankMainActivity">
 
     <item
         android:id="@+id/logout_toolbar_icon_4"
         android:orderInCategory="100"
-        android:title="Logout"
+        android:title="@string/text_logout"
         app:showAsAction="always"
         android:icon="@drawable/logout"
         />

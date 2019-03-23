@@ -4,5 +4,14 @@
     <dimen name="margin_top">20dp</dimen>
     <dimen name="margin_for_lines">16dp</dimen>
     <dimen name="padding_for_text">8dp</dimen>
-    <dimen name="toolbar_height">48dp</dimen>
+    <dimen name="toolbar_height">56dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="spinner_arrow_opacity">0.15</dimen>
+    <!-- dimen name="spinner_arrow_opacity">0.11</dimen átkerült a values.xml-be-->
+    <dimen name="mobilbank_main_icon_size">48dp</dimen>
+    <dimen name="divider_1_height">1dp</dimen>
+    <dimen name="toolbar_shadow_height">5dp</dimen>
+    <dimen name="margin_1">4dp</dimen>
+    <dimen name="margin_2">16dp</dimen>
+
 </resources>

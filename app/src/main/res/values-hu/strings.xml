@@ -1,6 +1,14 @@
 <resources>
+
+    <string name="facebook_address">https://www.facebook.com/X-Bank-378694379633392</string>
+    <string name="facebook_address_short">facebook.com/X-Bank</string>
+    <string name="web_address">http://www.xbank.hu</string>
+    <string name="email_address">info@xbank.com</string>
+    <string name="headquarter_address">1013 Budapest, Lánchíd utca 2.</string>
+    <string name="phone_number">+36-20-289-0955</string>
+
     <string name="app_name">X Bank</string>
-    <string name="enterToNetbank">Netbank belépés</string>
+    <string name="enterToMobilbank">Mobilbank belépés</string>
     <string name="selectLanguage">Nyelv választás</string>
     <string name="branchAndAtmList">Fiók- és ATM lista</string>
     <string name="rateOfExchange">Árfolyamok</string>
@@ -12,29 +20,32 @@
     <string name="text_proceed">Mehet</string>
 
     <string name="text_enter">Mehet</string>
-    <string name="text_enter_pin_code">Kérem a PIN kódot!</string>
+    <string name="text_enter_pin_code">Kérem a PIN kódot:</string>
+    <string name="text_enter_your_id">Kérem az azonosítót:</string>
     <string name="text_not_logged_in">Ön NINCS bejelentkezve!</string>
     <string name="text_logged_in">Ön be van jelentkezve!</string>
-    <string name="text_wrong_pin_code">Hibás PIN kód!</string>
+    <string name="text_wrong_pin_code">Sikertelen belépés!</string>
     <string name="text_logout">Kijelentkezés</string>
     <string name="text_pin_code_rule">A PIN kód hossza 4 és 6 számjegy közötti!</string>
+    <string name="text_id_code_rule">Az azonosító 8 számjegyből áll!</string>
     <string name="text_banned_1">Várnia kell "</string>
     <string name="text_banned_2"> másodpercet!"</string>
 
     <string name="welcomeText_1">X Bank ..."</string><!-- Ez szándékosan angol! Azért van itt, hogy a sorok száma megegyezzen a 2 string erőforrásban, a könnyebb összeehasonlíthatóság miatt -->
     <string name="welcomeText_2">... your future bank!"</string><!-- Ez szándékosan angol! Azért van itt, hogy a sorok száma megegyezzen a 2 string erőforrásban, a könnyebb összeehasonlíthatóság miatt -->
 
-    <string name="text_confirm_exit">Biztos, hogy ki akarsz lépni?"</string>
+    <string name="text_confirm_exit">Biztos, hogy ki akar lépni?"</string>
 
     <string name="currency">Valuta"</string>
     <string name="foreign_currency">Deviza"</string>
-    <string name="text_buy">Vétel:"</string>
-    <string name="text_sell">Eladás:"</string>
     <string name="text_date">Dátum:"</string>
+    <string name="text_buy">Vétel</string>
+    <string name="text_sell">Eladás</string>
+
 
     <string name="tab">\u0009\u0009\u0009\u0009</string><!-- csak így működik a tabulátor :( jelen formájában 4 karaktert ugrik-->
 
-    <string name="opening_hours">Nyitva:"</string>
+    <string name="opening_hours">Nyitvatartás"</string>
     <string name="text_branches">Bankfiókok"</string>
     <string name="text_atms">Bankautomaták"</string>
     <string name="atm_type">ATM típusa"</string>
@@ -43,18 +54,373 @@
     <string name="forint">Forint"</string>
     <string name="euro">EUR"</string>
 
-    <string name="email_us">Írjon emailt nekünk"</string>
-    <string name="email_address">info@xbank.com"</string>
-    <string name="call_us">Hívjon fel minket"</string>
-    <string name="phone_number">+36-1-123-4567"</string>
-    <string name="facebook">Nézzen meg minket Facebookon"</string>
-    <string name="facebook_address">facebook.com/xbank"</string>
-    <string name="homepage">Keresse fel weboldalunkat"</string>
-    <string name="homepage_address">www.xbank.com"</string>
+    <string name="email_us">Írjon nekünk emailt:"</string>
+
+    <string name="call_us">Hívjon fel minket:"</string>
+
+    <string name="facebook">Nézzen meg minket a Facebookon:"</string>
+
+    <string name="homepage">Keresse fel weboldalunkat":</string>
+
+    <string name="headquarter">Központunk címe:"</string>
+
 
     <string name="text_phone_permission">Kérem engedélyezze a hozzáférést a telefon-hívásokhoz!"</string>
-
     <string name="email_subject">Információ kérés"</string>
     <string name="email_app_chooser_text">Válasszon alkalmazást:"</string>
+
+    <string name="yes">Igen"</string>
+    <string name="no">Nem"</string>
+
+    <string name="monday">Hétfő"</string>
+    <string name="tuesday">Kedd"</string>
+    <string name="wednesday">Szerda"</string>
+    <string name="thursday">Csütörtök"</string>
+    <string name="friday">Péntek"</string>
+    <string name="saturday">Szombat"</string>
+    <string name="sunday">Vasárnap"</string>
+
+    <string name="TitleMainmenu">Főmenü"</string>
+    <string name="TitleLogin">Bejelentkezés"</string>
+    <string name="TitleSelectLanguage">Nyelv választás"</string>
+    <string name="TitleBranchAndAtm">Fiókok és bankautomaták"</string>
+    <string name="TitleExchangeRates">Árfolyamok"</string>
+    <string name="TitleContacts">Elérhetőségek"</string>
+    <string name="TitleInformation">Információ"</string>
+    <string name="TitleNetBankMain">Áttekintés"</string>
+    <string name="TitleBankAccountBalance">Egyenleg"</string>
+    <string name="TitleCreditcards">Bankkártyák"</string>
+    <string name="TitlePinCodeChange">PIN kód változtatás</string>
+    <string name="TitleTransferMoneyOneTime">Egyszeri átutalás</string>
+    <string name="TitleTransferMoneyRecurring">Új állandó megbízás</string>
+    <string name="TitleRecurringTransfers">Állandó megbízások</string>
+    <string name="TitleEditRecurringTransfers">Állandó megbízás módosítása</string>
+    <string name="TitleBankAccountHistory">Számlatörténet"</string>
+    <string name="TitleBankAccountStatements">Számlakivonatok"</string>
+    <string name="TitleSavings">Megtakarítások"</string>
+    <string name="TitleSavingsNew">Új betét lekötés"</string>
+    <string name="TitleBeneficiaries">Kedvezményezettek"</string>
+    <string name="TitleNewBeneficiary">Új kedvezményezett"</string>
+    <string name="TitleEditBeneficiary">Kedvezményezett módosítása"</string>
+
+    <string name="SortByAddress">Rendezés cím szerint"</string>
+    <string name="SortByDistance">Rendezés távolság szerint"</string>
+    <string name="text_forward">Tovább</string>
+
+    <string name="really_exit">Biztos, hogy ki akar lépni?</string>
+    <string name="use_your_fingerprint">Vagy használja ujjlenyomatát</string>
+
+    <string name="back_button_double_press">Nyomja meg mégegyszer a VISSZA gombot a kilépéshez!</string>
+    <string name="updated_on">Frissítve:</string>
+
+    <string name="refresh_rates">Árfolyamok frissítése</string>
+
+    <string name="EUR">Euro</string>
+    <string name="USD">Amerikai dollár</string>
+    <string name="GBP">Angol font</string>
+    <string name="AUD">Ausztrál dollár</string>
+    <string name="BGN">Bolgár leva</string>
+    <string name="CAD">Kanadai dollár</string>
+    <string name="CHF">Svájci frank</string>
+    <string name="CZK">Cseh korona</string>
+    <string name="DKK">Dán korona</string>
+    <string name="HRK">Horvát kuna</string>
+    <string name="JPY">Japán jen</string>
+    <string name="NOK">Norvég korona</string>
+    <string name="PLN">Lengyel zloty</string>
+    <string name="RON">Román új lej</string>
+    <string name="RSD">Szerb dínár</string>
+    <string name="RUB">Orosz rubel</string>
+    <string name="SEK">Svéd korona</string>
+
+    <string name="text_remove">Törli a beírt azonosítót?</string>
+
+    <string-array name="mobilebank_mainmenu_list">
+        <item>Egyenleg lekérdezés</item>
+        <item>Egyszeri átutalás</item>
+        <item>Állandó megbízások</item>
+        <item>Megtakarítások</item>
+        <item>Számlatörténet</item>
+        <item>Számlakivonatok</item>
+        <item>Bankkártyák kezelése</item>
+        <item>PIN kód változtatás</item>
+    </string-array>
+
+    <string name="account">számla</string>
+    <string name="welcome">Üdvözlöm</string>
+    <string name="validto">Érvényesség</string>
+
+    <string name="balance">Egyenleg</string>
+
+    <string name="enter_current_pincode">Kérem a jelenlegi PIN kódot:</string>
+    <string name="enter_new_pincode">Kérem az új PIN kódot:</string>
+    <string name="re_enter_new_pincode">Új PIN kód mégegyszer:</string>
+
+    <string name="beneficiary_name">Kedvezményezett neve:</string>
+    <string name="target_account">Célszámla:</string>
+    <string name="amount_to_be_transfered">Átutalandó összeg:</string>
+    <string name="comments_on_order">Közlemény:</string>
+    <string name="order_date">Megbízás dátuma:</string>
+    <string name="source_account">Forrásszámla:</string>
+
+    <string name="transfer_ok">Sikeres átutalás!</string>
+    <string name="transfer_not_ok">Sikertelen átutalás!</string>
+    <string name="notenoughmoney">Nincs elég pénz ezen a számlán!</string>
+    <string name="recurring_transfer_ok">Az állandó megbízás rögzítésre került!</string>
+    <string name="recurring_transfer_not_ok">A megbízás rögzítése nem sikertült!</string>
+    <string name="modification_ok">A módosítás sikeresen megtörtént!</string>
+    <string name="modification_not_ok">A módosítás nem sikerült!</string>
+
+    <string name="frequency_of_transfer">Átutalás gyakorisága:</string>
+    <string name="frequency_of_transfer_day">Napok:</string>
+
+    <string-array name="recurring_transfers_frequency">
+        <item> </item>
+        <item>Minden nap</item>
+        <item>Minden hét</item>
+        <item>Minden hónap</item>
+    </string-array>
+
+    <string-array name="recurring_transfers_days_for_weeks">
+        <item> </item>
+        <item>hétfőjén</item>
+        <item>keddjén</item>
+        <item>szerdáján</item>
+        <item>csütörtökén</item>
+        <item>péntekén</item>
+        <item>szombatján</item>
+        <item>vasárnapján</item>
+    </string-array>
+
+    <string-array name="recurring_transfers_days_for_months">
+        <item> </item>
+        <item>1. napján</item>
+        <item>2. napján</item>
+        <item>3. napján</item>
+        <item>4. napján</item>
+        <item>5. napján</item>
+        <item>6. napján</item>
+        <item>7. napján</item>
+        <item>8. napján</item>
+        <item>9. napján</item>
+        <item>10. napján</item>
+        <item>11. napján</item>
+        <item>12. napján</item>
+        <item>13. napján</item>
+        <item>14. napján</item>
+        <item>15. napján</item>
+        <item>16. napján</item>
+        <item>17. napján</item>
+        <item>18. napján</item>
+        <item>19. napján</item>
+        <item>20. napján</item>
+        <item>21. napján</item>
+        <item>22. napján</item>
+        <item>23. napján</item>
+        <item>24. napján</item>
+        <item>25. napján</item>
+        <item>26. napján</item>
+        <item>27. napján</item>
+        <item>28. napján</item>
+        <item>29. napján</item>
+        <item>30. napján</item>
+        <item>31. napján</item>
+    </string-array>
+
+    <string-array name="recurring_transfers_days_empty">
+        <item> </item>
+    </string-array>
+
+    <string name="name_of_recurring_transfer">Állandó megbízás neve:</string>
+
+    <string name="active">Aktív</string>
+    <string name="inactive">Inaktív</string>
+
+    <string name="Balance_query">Egyenleg lekérdezés</string>
+    <string name="One_time_transfer">Egyszeri átutalás</string>
+    <string name="Recurring_transfers">Állandó megbízások</string>
+    <string name="Savings">Megtakarítások</string>
+    <string name="Account_history">Számlatörténet</string>
+    <string name="Account_statements">Számlakivonatok</string>
+    <string name="Beneficiaries">Kedvezményezettek"</string>
+    <string name="Manage_credit_cards">Bankkártyák kezelése</string>
+    <string name="Change_PIN_code">PIN kód változtatás</string>
+    <string name="last_login">Utolsó bejelentkezés:</string>
+    <string name="no_internet_connection">Nincs internet-kapcsolat!</string>
+    <string name="no_active_account">Önnek nincs aktív bankszámlája!</string>
+    <string name="delete_statement">Töröli a telefonról ezt a kivonatot?</string>
+    <string name="statement_deleted">Kivonat törölve!</string>
+    <string name="download_completed">Letöltés befejeződött!</string>
+    <string name="security_timeout_expired">A biztonsági időkorlát lejárt!</string>
+    <string name="want_to_prolong">Szeretné meghosszabbítani?</string>
+    <string name="delete_beneficiary">Tényleg törölni akarja ezt a kedvezményezettet?</string>
+    <string name="template_name_needed">A sablon nevét meg kell adni!</string>
+    <string name="beneficiary_name_needed">A kevezményezett nevét meg kell adni!</string>
+    <string name="rule_account_number">A számlaszám 2x8 vagy 3x8 számjegyből kell hogy álljon!</string>
+    <string name="record_successful">Sikeres rögzítés</string>
+    <string name="distance_data_updated">A távolság adatok frissítésre kerültek!</string>
+    <string name="card">kártya</string>
+    <string name="card_status">A kártya állapota:</string>
+    <string name="forint_short">Ft</string>
+    <string name="limit_atm">Atm limit:</string>
+    <string name="limit_pos">Pos limit:</string>
+    <string name="limit_online">Online limit:</string>
+    <string name="no_creditcard">Önnek nincs bankkártyája!</string>
+    <string name="open_statement">Kivonat megtekintése</string>
+    <string name="downloaded">Letöltve</string>
+    <string name="not_downloaded">Nincs letöltve</string>
+    <string name="download_statement">Kivonat letöltése</string>
+    <string name="recurring_transfer_name_needed">Az állandó megbízás nevét meg kell adni!</string>
+    <string name="amount_needed">Az összeget ki kell tölteni!!</string>
+    <string name="rule_max_amount">Csak 1 milliárd egységnél kevesebbet lehet utalni!</string>
+    <string name="rule_min_amount">1 egységnél kevesebbet nem lehet utalni!</string>
+    <string name="choose_period">Kérem válasszon periódust!</string>
+    <string name="choose_day">Kérem válasszon napot!</string>
+    <string name="no_bank_account">Önnek nincs aktív bankszámlája!</string>
+    <string name="exchange_rates_refreshed">Az árfolyamok frissítésre kerültek!</string>
+    <string name="authentication_failed">Azonosítás sikertelen</string>
+    <string name="authentication_help">Azonosítási segítség</string>
+    <string name="fingerprint_authorized">Ujjlenyomat azonosítva!</string>
+    <string name="copyright_vt">© 2019 - Verovszki Tamás</string>
+    <string name="information_text_1">1. Rövid leírás:  ...</string>
+    <string name="information_text_2">2. Hosszú leírás:  ...</string>
+    <string name="expire">Lejárat:</string>
+    <string name="rate">Kamat:</string>
+    <string name="lockup_amount">Lekötött összeg:</string>
+    <string name="pincode_mismatch">A két pinkód nem egyezik!</string>
+    <string name="pincode_changed_succesfully">Sikeres PIN kód változtatás!</string>
+    <string name="delete_order">Törli ezt a megbízást?</string>
+    <string name="no_active_savings">Önnek nincs aktív megtakarítása!</string>
+    <string name="deposit_breaked">A megtakarítás sikeresen feltörésre került</string>
+    <string name="deposit_break_unsuccessful">A megtakarítás feltörése nem sikerült!</string>
+    <string name="break_deposit">Feltöri ezt a megtakarítást?</string>
+    <string name="days">nap</string>
+    <string name="new_saving_successful">Az új lekötés megtörtént</string>
+    <string name="no_location_permission">Engedély hiányában a távolság adatok nem kerülnek megjelenítésre</string>
+    <string name="read_error">Beolvasási hiba</string>
+    <string name="no_specie">Forint utalásnál fillérek nem alkalmazhatók!</string>
+    <string name="new_beneficiary">Új kedvezményezett</string>
+    <string name="account_details">Számla részletes adatai</string>
+    <string name="account_owner">Számlatulajdonos:</string>
+    <string name="account_number">Számlaszám:</string>
+    <string name="account_type">Számla típusa:</string>
+    <string name="current_balance">Aktuális egyenleg:</string>
+    <string name="account_status">Számla státusza:</string>
+    <string name="account_open_time">Számlanyitás dátuma:</string>
+    <string name="from">-tól</string>
+    <string name="to">-ig</string>
+    <string name="withdrawals">Terhelések</string>
+    <string name="deposits">Jóváírások</string>
+    <string name="empty_list">A lista üres</string>
+    <string name="template_name">Sablon neve:</string>
+    <string name="card_number">Kártyaszám:</string>
+    <string name="status">Állapot</string>
+    <string name="edit">Módosít</string>
+    <string name="x_bank_version">X Bank - mobilbank applikáció Verzió: 0.98.2</string>
+    <string name="active_accounts">Aktív bankszámlák:</string>
+    <string name="creditcards">Bankkártyák:</string>
+    <string name="saving_details">Megtakarítás részletes adatai</string>
+    <string name="saving_type">Megtakarítás típusa:</string>
+    <string name="expire_date">Lejárat dátuma:</string>
+    <string name="saving_status">Megtakarítás státusza:</string>
+    <string name="reference_number">Referenciaszám:</string>
+    <string name="maturity_amount">Lejáratkori összeg:</string>
+    <string name="saving_date">Lekötés dátuma:</string>
+    <string name="deutsch">Deutsch</string>
+    <string name="transaction_details">Tranzakció részletes adatai</string>
+    <string name="transaction_type">Tranzakció típusa:</string>
+    <string name="direction">Irány:</string>
+    <string name="amount">Összeg</string>
+    <string name="amount_2">Összeg:</string>
+    <string name="partner_name">Partner neve:</string>
+    <string name="partner_number">Partner számlaszáma:</string>
+    <string name="comment">Közlemény:</string>
+    <string name="arrived_on">Érkezett:</string>
+    <string name="save_template">Mentés</string>
+    <string name="x_bank">X Bank</string>
+    <string name="statement_date">Kivonat dátuma:</string>
+    <string name="filename">Fájl neve</string>
+    <string name="valid">Érvényes:</string>
+    <string name="new_one_time_ransfer">Új átutalás</string>
+    <string name="new_recurring_transfer">Új állandó megbízás</string>
+    <string name="new_saving">Új megtakarítás</string>
+    <string name="detailed_informations">Részletes információ</string>
+
+    <string name="retail_bank_account">Lakossági folyószámla</string>
+    <string name="saving_account">Megtakarítási számla</string>
+    <string name="foreign_currency_account">Devizaszámla</string>
+    <string name="breaked">Feltörve</string>
+    <string name="expired">Lejárt</string>
+    <string name="yearly_saving">Éves lekötés</string>
+    <string name="monthly_saving">Havi lekötés</string>
+    <string name="weekly_saving">Heti lekötés</string>
+    <string name="quarterly_saving">Negyedéves lekötés</string>
+    <string name="every_day">Minden nap</string>
+    <string name="every_week">Minden hét</string>
+    <string name="every_month">Minden hónap</string>
+    <string name="on_mondays">hétfőjén"</string>
+    <string name="on_tuesdays">keddjén"</string>
+    <string name="on_wednesdays">szerdáján"</string>
+    <string name="on_thursdays">csütörtökén"</string>
+    <string name="on_fridays">péntekén"</string>
+    <string name="on_saturdays">szombatján"</string>
+    <string name="on_sundays">vasárnapján"</string>
+    <string name="on_first">1. napján</string>
+    <string name="on_second">2. napján</string>
+    <string name="on_third">3. napján</string>
+    <string name="on_fourth">4. napján</string>
+    <string name="on_fifth">5. napján</string>
+    <string name="on_sixth">6. napján</string>
+    <string name="on_seventh">7. napján</string>
+    <string name="on_eighth">8. napján</string>
+    <string name="on_nineth">9. napján</string>
+    <string name="on_tenth">10. napján</string>
+    <string name="on_eleventh">11. napján</string>
+    <string name="on_twelveth">12. napján</string>
+    <string name="on_thirteenth">13. napján</string>
+    <string name="on_fourteenth">14. napján</string>
+    <string name="on_fifteenth">15. napján</string>
+    <string name="on_sixteenth">16. napján</string>
+    <string name="on_seventeenth">17. napján</string>
+    <string name="on_eighteenth">18. napján</string>
+    <string name="on_nineteenth">19. napján</string>
+    <string name="on_twentieth">20. napján</string>
+    <string name="on_twenty_first">21. napján</string>
+    <string name="on_twenty_second">22. napján</string>
+    <string name="on_twenty_third">23. napján</string>
+    <string name="on_twenty_fourth">24. napján</string>
+    <string name="on_twenty_fifth">25. napján</string>
+    <string name="on_twenty_sixth">26. napján</string>
+    <string name="on_twenty_seventh">27. napján</string>
+    <string name="on_twenty_eighth">28. napján</string>
+    <string name="on_twenty_nineth">29. napján</string>
+    <string name="on_thirtieth">30. napján</string>
+    <string name="on_thirty_first">31. napján</string>
+    <string name="account_open">Bankszámla nyitás</string>
+    <string name="deposit">Jóváírás</string>
+    <string name="saving">Megtakarítás</string>
+    <string name="withdrawal">Terhelés</string>
+    <string name="transfer_fee">Átutalási díj</string>
+    <string name="early_withdrawal">Betét feltörés</string>
+    <string name="fund_withdrawal">Tőke jóváírás</string>
+    <string name="interest_withdrawal">Kamat jóváírás</string>
+    <string name="recurring_transfer">Állandó átutalás</string>
+    <string name="recurring_transfer_fee">Állandó átutalás díja</string>
+    <string name="not_initialized">Ismeretlen</string>
+    <string name="monthly_fee">Számlavezetási díj</string>
+    <string name="incoming_transfer">Bejövő utalás</string>
+    <string name="outgoing_transfer">Kimenő utalás</string>
+    <string name="purchase_with_credit_card">Bankkártyás vásárlás</string>
+    <string name="Savings_2">Megtakarítások:</string>
+    <string name="name">Név:</string>
+    <string name="overview">Áttekintés</string>
+    <string name="comment_monthly_fee">Számlavezetési díj</string>
+    <string name="comment_early_withdrawal">Betét feltörés</string>
+    <string name="comment_random_comment">Generált megjegyzés</string>
+    <string name="comment_account_opening">Számlanyitás</string>
+    <string name="comment_fund_withdrawal">tőke jóváírás</string>
+    <string name="comment_interest_withdrawal">kamat jóváírás</string>
+    <string name="comment_saving">Megtakarítás</string>
+    <string name="creditcard_modified_succesfully">A kártyaadatok módosítása megtörtént!</string>
 
 </resources>

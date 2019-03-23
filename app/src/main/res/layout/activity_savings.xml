@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SavingsActivity"
+    android:background="@drawable/leafbackground30"
+    android:id="@+id/drawer_layout"
+    android:fitsSystemWindows="true">
+
+
+
+<tamas.verovszki.xbank.OnlyVerticalSwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/SwipeRefreshLayout"
+>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/tool_bar"
+            layout="@layout/tool_bar_2"/>
+        <View
+            android:id="@+id/shadow"
+            android:layout_below="@id/tool_bar"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@drawable/toolbar_dropshadow"/>
+
+        <tamas.verovszki.xbank.MovableFloatingActionButton
+            android:id="@+id/FloatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/plussignwhite"
+            android:layout_margin="32dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="end|bottom"
+            />
+
+        <ListView
+            android:layout_below="@+id/tool_bar"
+            android:id="@+id/ListViewSavings"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/XBank_Frame_2"/>
+    </RelativeLayout>
+
+
+
+</tamas.verovszki.xbank.OnlyVerticalSwipeRefreshLayout>
+
+    <!-- Container for contents of drawer - use NavigationView to make configuration easier -->
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:menu="@menu/drawer_view"
+        app:headerLayout="@layout/navigation_drawer_header"
+        android:background="@color/lightgrey1"
+        app:itemTextColor="@color/black"
+        android:theme="@style/NavigationTheme">
+
+        <include layout="@layout/navigation_drawer_header"/>
+
+    </android.support.design.widget.NavigationView>
+
+
+</android.support.v4.widget.DrawerLayout>

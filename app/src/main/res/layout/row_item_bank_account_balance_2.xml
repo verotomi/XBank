@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="@style/MobilBankMain_Row_Items"
+
+    >
+
+
+
+    <RelativeLayout
+        android:id="@+id/LinLay1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/line_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lakossági folyószámla"
+            style="@style/MobilBankMain_Row_Item_TextView_1"
+            />
+        <TextView
+            android:id="@+id/line_d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="12345678"
+            style="@style/MobilBankMain_Row_Item_TextView_3"
+            />
+        <TextView
+            android:id="@+id/line_e"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forint"
+            android:layout_alignParentEnd="true"
+            style="@style/MobilBankMain_Row_Item_TextView_4"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/LinLay2"
+        android:layout_below="@+id/LinLay1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/line_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12345678-90123456-00000000"
+            style="@style/MobilBankMain_Row_Item_TextView_2"
+            />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,6 +1,14 @@
 <resources>
+
+    <string name="facebook_address">https://www.facebook.com/X-Bank-378694379633392</string>
+    <string name="facebook_address_short">facebook.com/X-Bank</string>
+    <string name="web_address">http://www.xbank.hu</string>
+    <string name="email_address">info@xbank.com</string>
+    <string name="headquarter_address">1013 Budapest, Lánchíd utca 2.</string>
+    <string name="phone_number">+36-20-289-0955</string>
+
     <string name="app_name">X Bank</string>
-    <string name="enterToNetbank">Enter to Netbank</string>
+    <string name="enterToMobilbank">Enter to Mobilbank</string>
     <string name="selectLanguage">Select language</string>
     <string name="branchAndAtmList">Branch- and ATM list</string>
     <string name="rateOfExchange">Exchange rates</string>
@@ -12,29 +20,32 @@
     <string name="text_proceed">Submit</string>
 
     <string name="text_enter">Enter</string>
-    <string name="text_enter_pin_code">Enter PIN code!</string>
+    <string name="text_enter_pin_code">Enter PIN code:</string>
+    <string name="text_enter_your_id">Enter your ID:</string>
     <string name="text_not_logged_in">You are NOT logged in!</string>
     <string name="text_logged_in">You are logged in!</string>
-    <string name="text_wrong_pin_code">Wrong PIN code!</string>
+    <string name="text_wrong_pin_code">Access denied!</string>
     <string name="text_logout">Log out</string>
     <string name="text_pin_code_rule">PIN code must be between 4 and 6 digits!</string>
+    <string name="text_id_code_rule">ID must be 8 digits!</string>
     <string name="text_banned_1">You have to wait "</string>
     <string name="text_banned_2"> seconds!"</string>
 
     <string name="welcomeText_1">X Bank ..."</string>
     <string name="welcomeText_2">... your future bank!"</string>
 
-    <string name="text_confirm_exit">Are you sure you want to logout?"</string>
+    <string name="text_confirm_exit">Are you sure you want to log out?"</string>
 
     <string name="currency">Currency"</string>
     <string name="foreign_currency">Foreign currency"</string>
-    <string name="text_buy">Buy:"</string>
-    <string name="text_sell">Sell:"</string>
     <string name="text_date">Date:"</string>
+    <string name="text_buy">Buy</string>
+    <string name="text_sell">Sell</string>
+
 
     <string name="tab">\u0009\u0009\u0009\u0009</string><!-- csak így működik a tabulátor :( jelen formájában 4 karaktert ugrik-->
 
-    <string name="opening_hours">Open:"</string>
+    <string name="opening_hours">Opening hours"</string>
     <string name="text_branches">Branches"</string>
     <string name="text_atms">ATM-s"</string>
     <string name="atm_type">ATM type"</string>
@@ -43,19 +54,374 @@
     <string name="forint">Forint"</string>
     <string name="euro">EUR"</string>
 
-    <string name="email_us">Write us an email"</string>
-    <string name="email_address">info@xbank.com"</string>
-    <string name="call_us">Call us"</string>
-    <string name="phone_number">+36-1-123-4567"</string>
-    <string name="facebook">Watch us on Facebook"</string>
-    <string name="facebook_address">facebook.com/xbank"</string>
-    <string name="homepage">Visit our homepage"</string>
-    <string name="homepage_address">www.xbank.com"</string>
+    <string name="email_us">Write us an email:"</string>
+
+    <string name="call_us">Call us:"</string>
+
+    <string name="facebook">Watch us on the Facebook:"</string>
+
+    <string name="homepage">Visit our homepage:"</string>
+
+    <string name="headquarter">Headquarter:"</string>
+
 
     <string name="text_phone_permission">Please grant the permission to call!"</string>
-
     <string name="email_subject">Information request"</string>
     <string name="email_app_chooser_text">Choose an app:"</string>
+
+    <string name="yes">Yes"</string>
+    <string name="no">No"</string>
+
+    <string name="monday">Monday"</string>
+    <string name="tuesday">Tuesday"</string>
+    <string name="wednesday">Wednesday"</string>
+    <string name="thursday">Thursday"</string>
+    <string name="friday">Friday"</string>
+    <string name="saturday">Saturday"</string>
+    <string name="sunday">Sunday"</string>
+
+    <string name="TitleMainmenu">Main menu"</string>
+    <string name="TitleLogin">Login"</string>
+    <string name="TitleSelectLanguage">Language selection"</string>
+    <string name="TitleBranchAndAtm">Branches and ATMs"</string>
+    <string name="TitleExchangeRates">Exchange rates"</string>
+    <string name="TitleContacts">Contacts"</string>
+    <string name="TitleInformation">Information"</string>
+    <string name="TitleNetBankMain">Overview</string>
+    <string name="TitleBankAccountBalance">Account balance"</string>
+    <string name="TitleCreditcards">Credit cards"</string>
+    <string name="TitlePinCodeChange">PIN code change</string>
+    <string name="TitleTransferMoneyOneTime">One-time transfer</string>
+    <string name="TitleTransferMoneyRecurring">New recurring transfer</string>
+    <string name="TitleRecurringTransfers">Recurring transfers</string>
+    <string name="TitleEditRecurringTransfers">Edit recurring transfer</string>
+    <string name="TitleBankAccountHistory">Account history"</string>
+    <string name="TitleBankAccountStatements">Account statements"</string>
+    <string name="TitleSavings">Savings"</string>
+    <string name="TitleSavingsNew">New saving"</string>
+    <string name="TitleBeneficiaries">Beneficiaries"</string>
+    <string name="TitleNewBeneficiary">New beneficiary"</string>
+    <string name="TitleEditBeneficiary">Edit beneficiary"</string>
+
+    <string name="SortByAddress">Sort by address"</string>
+    <string name="SortByDistance">Sort by distance"</string>
+    <string name="text_forward">Submit</string>
+
+    <string name="really_exit">Are you sure you want to exit?</string>
+    <string name="use_your_fingerprint">Or use your fingerprint</string>
+
+    <string name="back_button_double_press">Please click BACK again to exit!</string>
+    <string name="updated_on">Updated on</string>
+
+    <string name="refresh_rates">Refresh rates</string>
+
+    <string name="EUR">Euro</string>
+    <string name="USD">US Dollar</string>
+    <string name="GBP">British Pound</string>
+    <string name="AUD">Australian Dollar</string>
+    <string name="BGN">Bulgarian Lev</string>
+    <string name="CAD">Canadian Dollar	</string>
+    <string name="CHF">Swiss Franc</string>
+    <string name="CZK">Czech Koruna	</string>
+    <string name="DKK">Danish Krone	</string>
+    <string name="HRK">Croatian Kuna</string>
+    <string name="JPY">Japanese Yen	</string>
+    <string name="NOK">Norwegian Kroner</string>
+    <string name="PLN">Polish Zloty	</string>
+    <string name="RON">Romanian New Lei</string>
+    <string name="RSD">Serbian Dinar</string>
+    <string name="RUB">Russian Rouble</string>
+    <string name="SEK">Swedish Krona</string>
+
+    <string name="text_remove">Remove entered Id?</string>
+
+    <string-array name="mobilebank_mainmenu_list">
+        <item>Balance query</item>
+        <item>One-time transfer</item>
+        <item>Recurring transfers</item>
+        <item>Savings</item>
+        <item>Account history</item>
+        <item>Account statements</item>
+        <item>Manage credit cards</item>
+        <item>Change PIN code</item>
+    </string-array>
+
+    <string name="account">account</string>
+    <string name="welcome">Welcome</string>
+    <string name="validto">Valid to</string>
+
+    <string name="balance">Balance</string>
+
+    <string name="enter_current_pincode">Enter current PIN code:</string>
+    <string name="enter_new_pincode">Enter new PIN code:</string>
+    <string name="re_enter_new_pincode">Re-enter new PIN code:</string>
+
+    <string name="beneficiary_name">Name of beneficiary:</string>
+    <string name="target_account">Target account:</string>
+    <string name="amount_to_be_transfered">Amount to be transfered:</string>
+    <string name="comments_on_order">Comments on order:</string>
+    <string name="order_date">Order date:</string>
+    <string name="source_account">Source account:</string>
+
+    <string name="transfer_ok">Transfer sent succesfully!</string>
+    <string name="transfer_not_ok">Transfer was not sent succesfully!</string>
+    <string name="notenoughmoney">There is no enough money on this account !</string>
+    <string name="recurring_transfer_ok">Recurring transfer recorded succesfully!</string>
+    <string name="recurring_transfer_not_ok">Error while recording order!</string>
+    <string name="modification_ok">Modification was succesfull!</string>
+    <string name="modification_not_ok">Modification wasn\'t succesfull!</string>
+
+    <string name="frequency_of_transfer">Frequency of transfer:</string>
+    <string name="frequency_of_transfer_day">On:</string>
+
+    <string-array name="recurring_transfers_frequency">
+        <item> </item>
+        <item>Every day</item>
+        <item>Every week</item>
+        <item>Every month</item>
+    </string-array>
+
+    <string-array name="recurring_transfers_days_for_weeks">
+        <item> </item>
+        <item>on Mondays</item>
+        <item>on Tuesdays</item>
+        <item>on Wednesdays</item>
+        <item>on Thursdays</item>
+        <item>on Fridays</item>
+        <item>on Saturdays</item>
+        <item>on Sundays</item>
+    </string-array>
+
+    <string-array name="recurring_transfers_days_for_months">
+        <item> </item>
+        <item>on the 1st</item>
+        <item>on the 2nd</item>
+        <item>on the 3rd</item>
+        <item>on the 4th</item>
+        <item>on the 5th</item>
+        <item>on the 6th</item>
+        <item>on the 7th</item>
+        <item>on the 8th</item>
+        <item>on the 9th</item>
+        <item>on the 10th</item>
+        <item>on the 11th</item>
+        <item>on the 12th</item>
+        <item>on the 13th</item>
+        <item>on the 14th</item>
+        <item>on the 15th</item>
+        <item>on the 16th</item>
+        <item>on the 17th</item>
+        <item>on the 18th</item>
+        <item>on the 19th</item>
+        <item>on the 20th</item>
+        <item>on the 21st</item>
+        <item>on the 22nd</item>
+        <item>on the 23rd</item>
+        <item>on the 24th</item>
+        <item>on the 25th</item>
+        <item>on the 26th</item>
+        <item>on the 27th</item>
+        <item>on the 28th</item>
+        <item>on the 29th</item>
+        <item>on the 30th</item>
+        <item>on the 31st</item>
+    </string-array>
+
+    <string-array name="recurring_transfers_days_empty">
+        <item> </item>
+    </string-array>
+
+    <string name="name_of_recurring_transfer">Recurring transfer\'s name:</string>
+
+    <string name="active">Active</string>
+    <string name="inactive">Inactive</string>
+
+    <string name="Balance_query">Balance query</string>
+    <string name="One_time_transfer">One-time transfer</string>
+    <string name="Recurring_transfers">Recurring transfers</string>
+    <string name="Savings">Savings</string>
+    <string name="Account_history">Account history</string>
+    <string name="Account_statements">Account statements</string>
+    <string name="Beneficiaries">Beneficiaries"</string>
+    <string name="Manage_credit_cards">Manage credit cards</string>
+    <string name="Change_PIN_code">Change PIN code</string>
+    <string name="last_login">Last login:</string>
+    <string name="no_internet_connection">There is no internet connection!</string>
+    <string name="no_active_account">You don\'t have any active bank account!!</string>
+    <string name="delete_statement">Delete statement from phone?</string>
+    <string name="statement_deleted">Statement deleted!</string>
+    <string name="download_completed">Download Completed</string>
+    <string name="security_timeout_expired">Security timeout has expired!</string>
+    <string name="want_to_prolong">Do you want to prolong?</string>
+    <string name="delete_beneficiary">Do you want to delete beneficiary?</string>
+    <string name="template_name_needed">Template name is mandatory!</string>
+    <string name="beneficiary_name_needed">beneficiary name is mandatory!</string>
+    <string name="rule_account_number">Account number consists 2x8 or 3x8 digits!</string>
+    <string name="record_successful">Succesful recording!</string>
+    <string name="distance_data_updated">Distance data updated!</string>
+    <string name="card">card</string>
+    <string name="card_status">Card\'s status:</string>
+    <string name="forint_short">Ft</string>
+    <string name="limit_atm">Atm limit:</string>
+    <string name="limit_pos">Pos limit:</string>
+    <string name="limit_online">Online limit:</string>
+    <string name="no_creditcard">You don\'t have any credit card!</string>
+    <string name="open_statement">View statement</string>
+    <string name="downloaded">Downloaded</string>
+    <string name="not_downloaded">Not downloaded</string>
+    <string name="download_statement">Download statement</string>
+    <string name="recurring_transfer_name_needed">Recurring transfer\'s name ia mandatory!</string>
+    <string name="amount_needed">Amount has to be filled!</string>
+    <string name="rule_max_amount">Maximum amount to transfer is 1 billion unit!</string>
+    <string name="rule_min_amount">Minimum amount to transfer is 1 unit!</string>
+    <string name="choose_period">Choose a period!</string>
+    <string name="choose_day">Choose a day</string>
+    <string name="no_bank_account">You don\'t have any active bank account!</string>
+    <string name="exchange_rates_refreshed">Exchange rates have been refreshed!</string>
+    <string name="authentication_failed">Authentication failed</string>
+    <string name="authentication_help">Authentication help</string>
+    <string name="fingerprint_authorized">Fingerprint authorized!</string>
+    <string name="copyright_vt">© 2019 - Verovszki Tamás</string>
+    <string name="information_text_1">1. Short description:  ...</string>
+    <string name="information_text_2">2. Long description:  ...</string>
+    <string name="expire">Expire:</string>
+    <string name="rate">Rate:</string>
+    <string name="lockup_amount">Saved amount:</string>
+    <string name="pincode_mismatch">PIN codes are not identical!</string>
+    <string name="pincode_changed_succesfully">Pincode changed succesfully!</string>
+    <string name="delete_order">Delete this order?</string>
+    <string name="no_active_savings">You don\'t have any active saving!</string>
+    <string name="deposit_breaked">Deposit breaked successfully!</string>
+    <string name="deposit_break_unsuccessful">Deposit breaking wasn\'t successful!</string>
+    <string name="break_deposit">Breake this saving?</string>
+    <string name="days">days</string>
+    <string name="new_saving_successful">New saving ordered successfully!</string>
+    <string name="no_location_permission">Due to missing permission, distance data will not be displayed</string>
+    <string name="read_error">Read error!</string>
+    <string name="no_specie">No species can be used with Forints!</string>
+    <string name="new_beneficiary">New beneficiary</string>
+    <string name="account_details">Account details</string>
+    <string name="account_owner">Account owner:</string>
+    <string name="account_number">Account number:</string>
+    <string name="account_type">Account type:</string>
+    <string name="current_balance">Current balance:</string>
+    <string name="account_status">Account status:</string>
+    <string name="account_open_time">Account opened on:</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
+    <string name="withdrawals">Withdrawals</string>
+    <string name="deposits">Deposits</string>
+    <string name="empty_list">The list is empty!</string>
+    <string name="template_name">Template name:</string>
+    <string name="card_number">Card number:</string>
+    <string name="status">Status</string>
+    <string name="edit">Edit</string>
+    <string name="x_bank_version">X Bank - mobilebank application Version: 0.2.1</string>
+    <string name="active_accounts">Active bank accounts:</string>
+    <string name="creditcards">Creditcards:</string>
+    <string name="saving_details">Saving\'s details</string>
+    <string name="saving_type">Saving type:</string>
+    <string name="expire_date">Expire date:</string>
+    <string name="saving_status">Saving\'s status:</string>
+    <string name="reference_number">Reference number:</string>
+    <string name="maturity_amount">Maturity amount:</string>
+    <string name="saving_date">Locking date:</string>
+    <string name="deutsch">Deutsch</string>
+    <string name="transaction_details">Transaction details</string>
+    <string name="transaction_type">Transaction type:</string>
+    <string name="direction">Direction:</string>
+    <string name="amount">Amount</string>
+    <string name="amount_2">Amount:</string>
+    <string name="partner_name">Partner\'s name:</string>
+    <string name="partner_number">Partner\'s account number:</string>
+    <string name="comment">Comment:</string>
+    <string name="arrived_on">Arrived on:</string>
+    <string name="save_template">Save</string>
+    <string name="x_bank">X Bank</string>
+    <string name="statement_date">Statement\'s date:</string>
+    <string name="filename">File name</string>
+    <string name="valid">Valid :</string>
+    <string name="new_one_time_ransfer">New one time transfer</string>
+    <string name="new_recurring_transfer">New recurring transfer</string>
+    <string name="new_saving">New saving</string>
+    <string name="detailed_informations">Detailed informations</string>
+
+    <string name="retail_bank_account">Retail bank account</string>
+    <string name="saving_account">Saving account</string>
+    <string name="foreign_currency_account">Foreign currency account</string>
+    <string name="breaked">Breaked</string>
+    <string name="expired">Expired</string>
+    <string name="yearly_saving">Yearly saving</string>
+    <string name="monthly_saving">Monthly saving</string>
+    <string name="weekly_saving">Weekly saving</string>
+    <string name="quarterly_saving">Quarterly saving</string>
+    <string name="every_day">Every day</string>
+    <string name="every_week">Every week</string>
+    <string name="every_month">Every month</string>
+    <string name="on_mondays">on Mondays"</string>
+    <string name="on_tuesdays">on Tuesdays"</string>
+    <string name="on_wednesdays">on Wednesdays"</string>
+    <string name="on_thursdays">on Thursdays"</string>
+    <string name="on_fridays">on Fridays"</string>
+    <string name="on_saturdays">on Saturdays"</string>
+    <string name="on_sundays">on Sundays"</string>
+    <string name="on_first">on the 1st</string>
+    <string name="on_second">on the 2nd</string>
+    <string name="on_third">on the 3rd</string>
+    <string name="on_fourth">on the 4th</string>
+    <string name="on_fifth">on the 5th</string>
+    <string name="on_sixth">on the 6th</string>
+    <string name="on_seventh">on the 7th</string>
+    <string name="on_eighth">on the 8th</string>
+    <string name="on_nineth">on the 9th</string>
+    <string name="on_tenth">on the 10th</string>
+    <string name="on_eleventh">on the 11th</string>
+    <string name="on_twelveth">on the 12th</string>
+    <string name="on_thirteenth">on the 13th</string>
+    <string name="on_fourteenth">on the 14th</string>
+    <string name="on_fifteenth">on the 15th</string>
+    <string name="on_sixteenth">on the 16th</string>
+    <string name="on_seventeenth">on the 17th</string>
+    <string name="on_eighteenth">on the 18th</string>
+    <string name="on_nineteenth">on the 19th</string>
+    <string name="on_twentieth">on the 20th</string>
+    <string name="on_twenty_first">on the 21st</string>
+    <string name="on_twenty_second">on the 22nd</string>
+    <string name="on_twenty_third">on the 23rd</string>
+    <string name="on_twenty_fourth">on the 24th</string>
+    <string name="on_twenty_fifth">on the 25th</string>
+    <string name="on_twenty_sixth">on the 26th</string>
+    <string name="on_twenty_seventh">on the 27th</string>
+    <string name="on_twenty_eighth">on the 28th</string>
+    <string name="on_twenty_nineth">on the 29th</string>
+    <string name="on_thirtieth">on the 30th</string>
+    <string name="on_thirty_first">on the 31st</string>
+    <string name="account_open">Account open</string>
+    <string name="deposit">Deposit</string>
+    <string name="saving">Saving</string>
+    <string name="withdrawal">Withdrawal</string>
+    <string name="transfer_fee">Transfer fee</string>
+    <string name="early_withdrawal">Early withdrawal</string>
+    <string name="fund_withdrawal">Fund withdrawal</string>
+    <string name="interest_withdrawal">Interest withdrawal</string>
+    <string name="recurring_transfer">Recurring transfer</string>
+    <string name="recurring_transfer_fee">Recurring transfer fee</string>
+    <string name="not_initialized">Not initialized</string>
+    <string name="monthly_fee">Monthly fee</string>
+    <string name="incoming_transfer">Incoming transfer</string>
+    <string name="outgoing_transfer">Outgoing transfer</string>
+    <string name="purchase_with_credit_card">Purchase with credit card</string>
+    <string name="Savings_2">Savings:</string>
+    <string name="name">Name:</string>
+    <string name="overview">Overview</string>
+    <string name="comment_monthly_fee">Monthly fee</string>
+    <string name="comment_early_withdrawal">Early withdrawal</string>
+    <string name="comment_random_comment">Random comment</string>
+    <string name="comment_account_opening">Account opening</string>
+    <string name="comment_fund_withdrawal">fund withdrawal</string>
+    <string name="comment_interest_withdrawal">interest withdrawal</string>
+    <string name="comment_saving">Saving</string>
+    <string name="creditcard_modified_succesfully">Creditard data has been modified!</string>
 
 
 </resources>

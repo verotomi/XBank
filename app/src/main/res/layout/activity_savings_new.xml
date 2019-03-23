@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SavingsNewActivity"
+    android:background="@drawable/leafbackground30"
+    android:id="@+id/drawer_layout"
+    android:fitsSystemWindows="true">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:focusableInTouchMode="true"
+    android:descendantFocusability="beforeDescendants"
+>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/tool_bar_2"/>
+    <View
+        android:id="@+id/shadow"
+        android:layout_below="@id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_shadow_height"
+        android:background="@drawable/toolbar_dropshadow"/>
+
+        <LinearLayout
+            android:layout_below="@id/tool_bar"
+            android:id="@+id/LinLay0"
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            style="@style/XBank_Frame_2"
+            >
+
+        <TextView
+            android:id="@+id/TextViewSourceAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/source_account"
+            style="@style/XBank_Title"
+            android:visibility="visible" />
+        />
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+            <Spinner
+                android:id="@+id/SpinnerSourceAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/XBank_Spinner">
+            </Spinner>
+
+            <!-- be kellett raknom egy nyilat ide, mert ha beállítok hátteret a spinnernek, akkor az eredeti nnyíl eltűnik-->
+            <ImageView
+                android:background="@drawable/down4"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                style="@style/ImageView_Spinner_Arrow"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/TextViewType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/saving_type"
+            style="@style/XBank_Title"
+            android:visibility="visible" />
+        />
+
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+            <Spinner
+                android:id="@+id/SpinnerSavingType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/XBank_Spinner">
+                >
+            </Spinner>
+
+            <!-- be kellett raknom egy nyilat ide, mert ha beállítok hátteret a spinnernek, akkor az eredeti nnyíl eltűnik-->
+            <ImageView
+                android:background="@drawable/down4"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                style="@style/ImageView_Spinner_Arrow"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/TextViewAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lockup_amount"
+            style="@style/XBank_Title"
+            android:visibility="visible" />
+        />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            >
+            <EditText
+                android:id="@+id/EditTextAmount"
+                android:inputType="number"
+                android:gravity="right"
+                android:maxLines="2"
+                android:maxLength="11"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="80"
+                android:focusable="true"
+                style="@style/SavingsNew_EditTextAmount"
+                android:focusableInTouchMode="true"/>
+
+            <TextView
+                android:id="@+id/TextViewCurrency"
+                android:layout_width="0dp"
+                android:layout_weight="20"
+                style="@style/SavingsNew_TextViewCurrency"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/ButtonSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_proceed"
+            android:layout_gravity="center"
+            style="@style/XBank_Button"
+            />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
+
+    <!-- Container for contents of drawer - use NavigationView to make configuration easier -->
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:menu="@menu/drawer_view"
+        app:headerLayout="@layout/navigation_drawer_header"
+        android:background="@color/lightgrey1"
+        app:itemTextColor="@color/black"
+        android:theme="@style/NavigationTheme">
+
+        <include layout="@layout/navigation_drawer_header"/>
+
+    </android.support.design.widget.NavigationView>
+
+
+</android.support.v4.widget.DrawerLayout>
+

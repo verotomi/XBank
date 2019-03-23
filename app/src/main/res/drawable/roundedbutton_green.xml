@@ -2,7 +2,7 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_hovered="true">
         <shape android:shape="rectangle">
-            <corners android:radius="14dp" />
+            <corners android:radius="8dp" />
             <solid android:color="#58857e" />
             <stroke android:width="1dip" android:color="#5e7974" /><!-- gomb kerete-->
             <padding android:bottom="5dp" android:left="5dp" android:right="5dp" android:top="5dp" />
@@ -10,7 +10,7 @@
     </item>
     <item android:state_focused="true">
         <shape android:shape="rectangle">
-            <corners android:radius="14dp" />
+            <corners android:radius="8dp" />
             <solid android:color="#58857e" />
             <stroke android:width="1dip" android:color="#5e7974" /><!-- gomb kerete-->
             <padding android:bottom="5dp" android:left="5dp" android:right="5dp" android:top="5dp" />
@@ -18,16 +18,16 @@
     </item>
     <item android:state_pressed="true">
         <shape android:shape="rectangle">
-            <corners android:radius="14dp" />
+            <corners android:radius="8dp" />
             <solid android:color="#58857e" />
             <stroke android:width="1dip" android:color="#5e7974" />
             <padding android:bottom="5dp" android:left="5dp" android:right="5dp" android:top="5dp" />
         </shape>
     </item>
     <item>
-        <shape android:shape="rectangle">
-            <corners android:radius="14dp" />
-            <gradient android:angle="-90" android:startColor="#8dbab3" android:endColor="#58857e" />
+        <shape android:layout_width="match_parent" android:layout_height="match_parent" android:shape="rectangle">
+            <corners android:radius="8dp" />
+            <gradient android:angle="-90" android:endColor="#58857e" android:startColor="#8dbab3" />
             <stroke android:width="1dip" android:color="#5e7974" />
             <padding android:bottom="5dp" android:left="5dp" android:right="5dp" android:top="5dp" />
         </shape>

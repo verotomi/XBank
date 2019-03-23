@@ -1,24 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<android.support.v4.widget.SwipeRefreshLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="tamas.verovszki.xbank.LoginActivity"
-    android:background="@drawable/leafbackground">
+    android:background="@drawable/leafbackground"
+    android:id="@+id/SwipeRefreshLayout"
+    >
 
-    <include
-        android:id="@+id/tool_bar"
-        layout="@layout/tool_bar"/>
 
     <LinearLayout
         android:id="@+id/LinearLayout1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/my_toolbar_2"
+        android:layout_below="@id/tool_bar"
         android:orientation="vertical"
-        android:gravity="center_vertical">
+        android:gravity="top">
     <!-- Ez a LinearLayout kellett ide, hogy a képernyő többi része középre kerüljön -->
 
     <!--android.support.v7.widget.Toolbar
@@ -32,32 +31,104 @@
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/-->
     <!-- android:layout_height="?attr/actionBarSize" --> -->
 
+        <include
+            android:id="@+id/tool_bar"
+            layout="@layout/tool_bar"
+            />
 
-    <TextView
+
+
+        <LinearLayout
+            android:id="@+id/LinLayId"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/Text_View_Enter_PIN_Code"
-        android:text="@string/text_enter_pin_code"
-        android:gravity="center_horizontal"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:layout_marginTop="36dp"
+        android:orientation="horizontal"
+        android:gravity="start"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="8dp"
+
+        >
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Text_View_Enter_Id"
+            android:text="@string/text_enter_your_id"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp"
+            android:visibility="visible" />
+        />
+
+        <TextView
+            android:text=""
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Text_View_Stars_Id"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginStart="8sp"
+            android:paddingStart="6sp"
+            android:paddingEnd="6sp"
+            android:background="@drawable/rounded_background"
+
+            style="@style/Shadow_Middle_Dark"/>
+            <!-- android:background="@color/white_opacity_50" -->
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LinLayPin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="start"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginBottom="12dp"
-        style="@style/Shadow_Middle_Dark"/>
-    <TextView
+        android:visibility="invisible"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Text_View_Enter_PIN_Code"
+            android:text="@string/text_enter_pin_code"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:text=""
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Text_View_Stars_Pin"
+            android:paddingStart="6sp"
+            android:paddingEnd="6sp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginStart="8sp"
+            android:background="@drawable/rounded_background"
+            style="@style/Shadow_Middle_Dark"/>
+        <!-- android:background="@color/white_opacity_50" -->
+        />
+
+    </LinearLayout>
+
+    <!--TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/Text_View_Stars"
+        android:id="@+id/Text_View_Stars_Pin"
         android:layout_below="@id/Text_View_Enter_PIN_Code"
         android:layout_gravity="center_horizontal"
         android:text=""
         android:textSize="24sp"
-        style="@style/Shadow_Small_Dark"/>
+        style="@style/Shadow_Small_Dark"/-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/Linear_layout_1"
-        android:layout_below="@id/Text_View_Stars"
+        android:layout_below="@id/LinLayPin"
         android:gravity="center_horizontal">
         <Button
             android:layout_width="wrap_content"
@@ -151,7 +222,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/Button_enter"
             android:text="@string/text_enter"
-            style="@style/Buttons_Numeric" />
+            style="@style/Buttons_Numeric"
+            android:textSize="14sp"/>
     </LinearLayout>
     <TextView
         android:layout_width="match_parent"
@@ -164,19 +236,37 @@
         android:layout_marginBottom="15dp"
         android:textColor="@color/red"
         style="@style/Shadow_Small_Dark"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/Button_logout"
-        android:text="@string/text_logout"
-        android:layout_centerHorizontal="true"
-        android:visibility="invisible"
-        android:layout_below="@id/Text_View_Dialogue"
-        android:background="@drawable/roundedbutton_red"
-        android:textColor="@color/white"
-        style="@style/Shadow_Middle_Light"/>
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Text_View_Fingerprint"
+            android:text="@string/use_your_fingerprint"
+            android:layout_gravity="center_horizontal"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="12dp"
+            android:visibility="gone"
+            />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/LottieFingerprint"
+            android:layout_marginTop="24dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:lottie_fileName="android_fingerprint.json"
+            app:lottie_autoPlay="true"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="fitCenter"
+            android:scaleX="4.5"
+            android:scaleY="4.5"
+            android:visibility="gone"
+            app:lottie_loop="true"
+            />
 
     </LinearLayout>
 
-</RelativeLayout>
+</android.support.v4.widget.SwipeRefreshLayout>
 

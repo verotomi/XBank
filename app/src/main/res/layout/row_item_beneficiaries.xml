@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="4dp"
+    style="@style/Beneficiaries_Row_Items">
+
+    <TextView
+        android:id="@+id/line_a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Example name"
+
+        style="@style/Beneficiaries_Row_Item_TextView_1"/>
+    <LinearLayout
+        android:id="@+id/LinLay1"
+        android:layout_below="@id/line_a"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_below="@id/line_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/partner_name"
+            style="@style/Beneficiaries_Row_Item_TextView_2"/>
+        <TextView
+            android:id="@+id/line_b"
+            android:layout_below="@id/line_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Firstname Lastname"
+            style="@style/Beneficiaries_Row_Item_TextView_2"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LinLay2"
+        android:layout_below="@id/LinLay1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_below="@id/line_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/account_number"
+            style="@style/Beneficiaries_Row_Item_TextView_3a"/>
+        <TextView
+                android:id="@+id/line_c"
+                android:layout_below="@id/line_b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0123-4567-8901-2345"
+                style="@style/Beneficiaries_Row_Item_TextView_3b"/>
+        />
+    </LinearLayout>
+
+</RelativeLayout>

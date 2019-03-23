@@ -17,16 +17,47 @@
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
 
-    <TextView
-        android:id="@+id/Text_View_1"
-        android:layout_below="@+id/my_toolbar_4"
-        android:textColor="@color/white"
-        android:shadowColor="@color/black"
-        android:shadowRadius="2"
-        android:shadowDx="2"
-        android:shadowDy="2"
-        android:scrollbars="vertical"
-        android:padding="8dp"
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:layout_below="@id/my_toolbar_4">
+
+        <LinearLayout
+            android:id="@+id/LinLay1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text_View_0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/x_bank_version"
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            android:shadowColor="@color/black"
+            android:shadowRadius="2"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:padding="8dp"
+        />
+
+
+        <TextView
+            android:id="@+id/Text_View_1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/white"
+            android:shadowColor="@color/black"
+            android:shadowRadius="2"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:padding="8dp"
+
+            />
+        </LinearLayout>
+
+    </ScrollView>
+
 </RelativeLayout>

@@ -3,42 +3,88 @@
     package="tamas.verovszki.xbank">
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
     <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- ahhoz kell, hogy meg tudjuk nézni, hogy van-e internetkapcsolatunk. -->
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name=".MyApp"
         android:allowBackup="true"
-        android:icon="@drawable/xbanklogo"
+        android:icon="@drawable/xbanklogo2b"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar.StatusBarColor">
+        <activity android:name=".LogoutAnimation"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity
+            android:name=".DoneAnimation"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity
+            android:name=".TransactionDetailsActivity"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity
+            android:name=".SavingDetailsActivity"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity
+            android:name=".BankAccountDetailsActivity"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity android:name=".BeneficiaryEditActivity" />
+        <activity android:name=".BeneficiariesNewActivity" />
+        <activity android:name=".BeneficiariesActivity" /> <!-- @style/Theme.AppCompat.Light.NoActionBar.FullScreen -->
+        <activity android:name=".SavingsNewActivity" />
+        <activity android:name=".BankAccountStatementsActivity" />
+        <activity android:name=".BankAccountHistoryActivity" />
+        <activity android:name=".SavingsActivity" />
+        <activity android:name=".EditRecurringTransferActivity" />
+        <activity android:name=".RecurringTransfersActivity" />
+        <activity android:name=".TransferMoneyRecurringActivity" />
+        <activity android:name=".TransferMoneyOneTimeActivity" />
+        <activity android:name=".PinCodeChangeActivity" />
+        <activity android:name=".CreditCardsActivity" />
+        <activity android:name=".BankAccountBalancesActivity"
+            android:parentActivityName=".MobilBankMainActivity" />
         <activity android:name=".SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
+                <action android:name="android.intent.action.VIEW" /> <!-- Ezt utólag raktam be ide, egy hibaüzenet miatt! -->
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
         <activity
-            android:name=".LoginActivity"
-            android:parentActivityName=".MainActivity" />
+            android:name=".MainActivity"
+            android:label="@string/TitleMainmenu" />
         <activity
             android:name=".SelectLanguageActivity"
-            android:parentActivityName=".MainActivity" />
-        <activity android:name=".NetBankMainActivity" />
-        <activity
-            android:name=".InformationActivity"
-            android:parentActivityName=".MainActivity" />
-        <activity
-            android:name=".ExchangeRatesActivity"
+            android:label="@string/TitleSelectLanguage"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".BranchAndAtmListActivity"
-            android:parentActivityName=".MainActivity"/>
+            android:label="@string/TitleBranchAndAtm"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".ExchangeRatesActivity"
+            android:label="@string/TitleExchangeRates"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".ContactActivity"
-            android:parentActivityName=".MainActivity"/>
+            android:label="@string/TitleContacts"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".InformationActivity"
+            android:label="@string/TitleInformation"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".MobilBankMainActivity"
+            android:label="@string/TitleNetBankMain"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/TitleLogin"
+            android:parentActivityName=".MainActivity" />
     </application>
 
 </manifest>

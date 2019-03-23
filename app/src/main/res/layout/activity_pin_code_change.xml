@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PinCodeChangeActivity"
+    android:background="@drawable/leafbackground30"
+    android:id="@+id/drawer_layout"
+    android:fitsSystemWindows="true">
+
+
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/SwipeRefreshLayout"
+    >
+
+
+    <LinearLayout
+        android:id="@+id/LinearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tool_bar"
+        android:orientation="vertical"
+        android:gravity="top">
+
+        <include
+            android:id="@+id/tool_bar"
+            layout="@layout/tool_bar_2"/>
+        <View android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@drawable/toolbar_dropshadow"/>
+
+        <LinearLayout
+            android:id="@+id/LinLay0"
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/LinLayPin1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="start"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="8dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Text_View_Enter_Current_PinCode"
+                android:text="@string/enter_current_pincode"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="0dp"
+                android:visibility="visible" />
+            />
+
+            <TextView
+                android:text=""
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Text_View_Stars_Current_Pincode"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginStart="8sp"
+                android:paddingStart="6sp"
+                android:paddingEnd="6sp"
+                android:background="@drawable/rounded_background"
+
+                style="@style/Shadow_Middle_Dark"/>
+            <!-- android:background="@color/white_opacity_50" -->
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LinLayPin2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="start"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:visibility="invisible">
+
+            <TextView
+
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Text_View_New_Pincode"
+                android:text="@string/enter_new_pincode"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="0dp"
+                />
+            />
+
+            <TextView
+                android:text=""
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Text_View_Stars_New_Pincode"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginStart="8sp"
+                android:paddingStart="6sp"
+                android:paddingEnd="6sp"
+                android:background="@drawable/rounded_background"
+                style="@style/Shadow_Middle_Dark"/>
+            <!-- android:background="@color/white_opacity_50" -->
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LinLayPin3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="start"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="8dp"
+            android:visibility="invisible">
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Text_View_Re_Enter_PIN_Code"
+                android:text="@string/re_enter_new_pincode"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="0dp"
+                />
+            <TextView
+                android:text=""
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Text_View_Stars_Re_Enter_Pincode"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginStart="8sp"
+                android:paddingStart="6sp"
+                android:paddingEnd="6sp"
+                android:background="@drawable/rounded_background"
+                style="@style/Shadow_Middle_Dark"/>
+            <!-- android:background="@color/white_opacity_50" -->
+            />
+
+        </LinearLayout>
+
+        <!--TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Text_View_Stars_Pin"
+            android:layout_below="@id/Text_View_Enter_PIN_Code"
+            android:layout_gravity="center_horizontal"
+            android:text=""
+            android:textSize="24sp"
+            style="@style/Shadow_Small_Dark"/-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Linear_layout_1"
+            android:layout_below="@id/LinLayPin"
+            android:gravity="center_horizontal">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Button_1"
+                android:text="1"
+                style="@style/Buttons_Numeric"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Button_2"
+                android:text="2"
+                style="@style/Buttons_Numeric"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Button_3"
+                android:text="3"
+                style="@style/Buttons_Numeric"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Linear_layout_2"
+            android:gravity="center_horizontal"
+            android:layout_below="@id/Linear_layout_1">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Button_4"
+                android:text="4"
+                style="@style/Buttons_Numeric"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Button_5"
+                android:text="5"
+                style="@style/Buttons_Numeric"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Button_6"
+                android:text="6"
+                style="@style/Buttons_Numeric"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Linear_layout_3"
+            android:gravity="center_horizontal"
+            android:layout_below="@id/Linear_layout_2">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Button_7"
+                android:text="7"
+                style="@style/Buttons_Numeric"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Button_8"
+                android:text="8"
+                style="@style/Buttons_Numeric"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Button_9"
+                android:text="9"
+                style="@style/Buttons_Numeric"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Linear_layout_4"
+            android:gravity="center_horizontal"
+            android:layout_below="@id/Linear_layout_3">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Button_back"
+                android:text="&lt;--"
+                style="@style/Buttons_Numeric"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Button_0"
+                android:text="0"
+                style="@style/Buttons_Numeric"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Button_enter"
+                android:text="@string/text_enter"
+                style="@style/Buttons_Numeric"
+                android:textSize="14sp"/>
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Text_View_Dialogue"
+            android:text=""
+            android:gravity="center_horizontal"
+            android:layout_below="@id/Linear_layout_4"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:textColor="@color/red"
+            style="@style/Shadow_Small_Dark"/>
+   </LinearLayout>
+    </LinearLayout>
+
+</android.support.v4.widget.SwipeRefreshLayout>
+
+    <!-- Container for contents of drawer - use NavigationView to make configuration easier -->
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:menu="@menu/drawer_view"
+        app:headerLayout="@layout/navigation_drawer_header"
+        android:background="@color/lightgrey1"
+        app:itemTextColor="@color/black"
+        android:theme="@style/NavigationTheme">
+
+        <include layout="@layout/navigation_drawer_header"/>
+
+    </android.support.design.widget.NavigationView>
+
+
+</android.support.v4.widget.DrawerLayout>

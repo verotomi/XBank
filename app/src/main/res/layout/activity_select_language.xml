@@ -4,29 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="tamas.verovszki.xbank.SelectLanguageActivity"
-    android:background="@drawable/leafbackground">
+    android:background="@drawable/leafbackground"
+    tools:context="tamas.verovszki.xbank.SelectLanguageActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/my_toolbar_2"
         android:layout_width="match_parent"
         android:layout_height="@dimen/toolbar_height"
         android:background="@drawable/background_darkgrey_gradient"
-        app:titleTextColor="@color/white"
         android:elevation="4dp"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleTextColor="@color/white" />
 
     <TextView
         android:id="@+id/TextViewLanguageSelect"
+        style="@style/Shadow_Middle_Dark"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/my_toolbar_2"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
+        android:layout_margin="24dp"
         android:text="@string/text_select_language"
-        android:textSize="24sp"
         android:textColor="@color/white"
-        style="@style/Shadow_Middle_Dark"/>
+        android:textSize="24sp" />
 
     <RadioGroup
         android:id="@+id/RadioGroup1"
@@ -34,38 +35,58 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/TextViewLanguageSelect"
         android:layout_centerHorizontal="true"
-        android:orientation="horizontal">
+        android:orientation="vertical">
         <!--android:checkedButton="@+id/Radio_Button_English"-->
 
         <RadioButton
-            android:id="@+id/RadioButtonEnglish"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/text_english"
-            android:textColor="@color/white"
-            android:buttonTint="@color/verylightgreen"
-            style="@style/Shadow_Small_Dark"/>
-
-        <RadioButton
             android:id="@+id/RadioButtonHungarian"
+            style="@style/Shadow_Small_Dark"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:buttonTint="@color/verylightgreen"
             android:text="@string/text_hungarian"
             android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/RadioButtonDeutsch"
+            style="@style/Shadow_Small_Dark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:buttonTint="@color/verylightgreen"
-            style="@style/Shadow_Small_Dark"/>
+            android:text="@string/deutsch"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/RadioButtonEnglish"
+            style="@style/Shadow_Small_Dark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/verylightgreen"
+            android:text="@string/text_english"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
 
     </RadioGroup>
 
     <Button
         android:id="@+id/ButtonSelectLanguageProceed"
+
+        style="@style/Buttons_Numeric"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/RadioGroup1"
         android:layout_centerHorizontal="true"
+        android:layout_margin="32dp"
+        android:layout_marginStart="32dp"
+        android:textSize="14sp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
         android:text="@string/text_proceed"
-        style="@style/Shadow_Small_Dark"
-        android:textAllCaps="false"/>
+        android:textAllCaps="true" />
 
 
 </RelativeLayout>

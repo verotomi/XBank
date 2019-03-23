@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/one"
+        android:title="@string/new_one_time_ransfer" />
+    <item
+        android:id="@+id/two"
+        android:title="@string/new_recurring_transfer" />
+    <item
+        android:id="@+id/three"
+        android:title="@string/new_saving" />
+    <item
+        android:id="@+id/four"
+        android:title="@string/Account_history"/>
+    <item
+        android:id="@+id/five"
+        android:title="@string/download_statement"/>
+    <item
+        android:id="@+id/six"
+        android:title="@string/account_details"/>
+
+</menu>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheckedTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/text1"
+    style="?android:attr/spinnerDropDownItemStyle"
+    android:singleLine="false"
+    android:layout_width="match_parent"
+    android:layout_height="?android:attr/listPreferredItemHeightSmall"
+    android:ellipsize="middle"
+    android:paddingTop="2dp"
+    android:paddingBottom="2dp"
+    android:paddingStart="4dp"
+    android:paddingEnd="4dp"
+    android:textSize="14sp"
+
+    />
+
+<!--CheckedTextView xmlns:android="http://schemas.android.com/apk/res/android"
+android:id="@android:id/text1"
+style="?android:attr/spinnerDropDownItemStyle"
+android:singleLine="false"
+android:layout_width="match_parent"
+android:layout_height="?android:attr/listPreferredItemHeight"
+android:ellipsize="middle"
+android:paddingTop="2dp"
+android:paddingBottom="2dp"
+android:paddingStart="4dp"
+android:paddingEnd="4dp"
+android:textSize="14sp"
+
+    /-->
+

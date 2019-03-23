@@ -41,7 +41,6 @@
                 android:id="@+id/address_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/name"
                 android:layout_marginTop="5dp"
                 android:text="Hősök tere 10."
                 android:textColor="@android:color/black" />
@@ -53,7 +52,6 @@
                 android:layout_toRightOf="@id/branchandatm_icon"
                 android:layout_width="45dp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/name"
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="10dp"
                 android:text="Closed"
@@ -81,12 +79,12 @@
 
             <ImageView
                 android:id="@+id/item_infob"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
-                android:src="@android:drawable/ic_dialog_map" />
+                android:src="@drawable/map_white" />
     </RelativeLayout>
 
     <!-- ezt a két vonalat csak akkor rakjam vissza, ha ki tudtam szedni a listview-ből a sor-elválasztó vonalat.

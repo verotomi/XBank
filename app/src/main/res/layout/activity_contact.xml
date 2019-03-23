@@ -102,5 +102,26 @@
         android:layout_marginRight="@dimen/margin_for_lines"
         />
 
+    <include layout="@layout/row_item_contact_address" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="2sp"
+        android:layout_marginBottom="2sp"
+        android:background="@color/darkgreen"
+        android:layout_marginLeft="@dimen/margin_for_lines"
+        android:layout_marginRight="@dimen/margin_for_lines"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:layout_gravity="center"
+        android:background="@color/green"
+        android:layout_marginLeft="@dimen/margin_for_lines"
+        android:layout_marginRight="@dimen/margin_for_lines"
+        />
+
 
 </LinearLayout>

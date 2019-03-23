@@ -2,6 +2,7 @@ package tamas.verovszki.xbank;
 
 import android.Manifest;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.net.Uri;
@@ -19,11 +20,13 @@ import android.widget.Toast;
 
 public class ContactActivity extends AppCompatActivity {
 
-    ImageButton ImageButtonEmail, ImageButtonWeb, ImageButtonPhone, ImageButtonFb;
+    ImageButton ImageButtonEmail, ImageButtonWeb, ImageButtonPhone, ImageButtonFb, ImageButtonAddress;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_PORTRAIT); // képernyő-forgatás tiltása
         super.onCreate(savedInstanceState);
+        setTitle(getString(R.string.TitleContacts)); // Fejléc átállítása a kiválasztott nyelver. Ez még a setContentView() elé kell
         setContentView(R.layout.activity_contact);
 
         init();
@@ -31,15 +34,15 @@ public class ContactActivity extends AppCompatActivity {
         // Toolbar + visszanyíl - többek között be kell állítani hozzá a manifestben a szülő Activityt + kell egy Toolbar view az XML-be.
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar_5);
         setSupportActionBar(myToolbar);
-        ActionBar ab = getSupportActionBar();
-        ab.setDisplayHomeAsUpEnabled(true);
+        //ActionBar ab = getSupportActionBar();
+        //ab.setDisplayHomeAsUpEnabled(true); visszanyílat kiszedtem
 
 
         ImageButtonFb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 // Toast.makeText(ContactActivity.this, "Open facebook app", Toast.LENGTH_SHORT).show();
-                Intent i = newFacebookIntent(getApplicationContext().getPackageManager(),"https://www.facebook.com/groups/343674876060509/");
+                Intent i = newFacebookIntent(getApplicationContext().getPackageManager(),getString(R.string.facebook_address));
                 //Intent i = newFacebookIntent(getApplicationContext().getPackageManager(),getString(R.string.facebook_address));
                 startActivity(i);
 
@@ -68,7 +71,7 @@ public class ContactActivity extends AppCompatActivity {
             public void onClick(View view) {
                 //Toast.makeText(ContactActivity.this, "Open the web browser", Toast.LENGTH_SHORT).show();
                 //Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.homepage_address)));
-                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.digitalemotion.space"));
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.web_address)));
                 startActivity(browserIntent);
             }
         });
@@ -98,8 +101,19 @@ public class ContactActivity extends AppCompatActivity {
                 startActivity(Intent.createChooser(emailIntent, getString(R.string.email_app_chooser_text)));
             }
         });
-        
-        
+
+        ImageButtonAddress.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Intent intent = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse("google.navigation:q=Budapest, Lánchíd u. 2, 1013"));
+                //Intent intent = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse("http://maps.google.com/maps?daddr=Budapest, Lánchíd u. 2, 1013")); //  -- saddr - kiindulási cím, daddr - cél cím
+                //Intent intent = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse("http://maps.google.com/?q=47.4948646,19.033062"));
+                Intent intent = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse("http://maps.google.com/?q=" + getString(R.string.headquarter_address)));
+                Toast.makeText(ContactActivity.this, getString(R.string.headquarter_address), Toast.LENGTH_SHORT).show();
+                intent.setClassName("com.google.android.apps.maps", "com.google.android.maps.MapsActivity");
+                startActivity(intent);
+            }
+        });
     }
 
     public void init(){
@@ -107,6 +121,7 @@ public class ContactActivity extends AppCompatActivity {
         ImageButtonWeb = findViewById(R.id.imagebutton_web);
         ImageButtonPhone = findViewById(R.id.imagebutton_phone);
         ImageButtonFb = findViewById(R.id.imagebutton_facebook);
+        ImageButtonAddress = findViewById(R.id.imagebutton_address);
     }
 
     public static Intent newFacebookIntent(PackageManager pm, String url) {

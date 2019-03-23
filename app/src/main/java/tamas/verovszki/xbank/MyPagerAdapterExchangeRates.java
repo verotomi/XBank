@@ -28,7 +28,7 @@ public class MyPagerAdapterExchangeRates extends FragmentStatePagerAdapter {
                 Tab1Currencies tab1 = new Tab1Currencies();
                 return tab1;
             case 1:
-                Tab2Currencies tab2 = new Tab2Currencies();
+                Tab2ForeignCurrencies tab2 = new Tab2ForeignCurrencies();
                 return  tab2;
             default:
                 return null;

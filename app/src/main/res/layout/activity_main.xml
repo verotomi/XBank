@@ -40,7 +40,6 @@
 
         <LinearLayout
         android:id="@+id/LinearLayout2"
-        android:layout_below="@id/my_toolbar_2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:baselineAligned="false">
@@ -59,7 +58,7 @@
                 android:layout_width="@dimen/logo_size"
                 android:layout_height="@dimen/logo_size"
                 android:layout_gravity="center"
-                android:background="@drawable/imageselector11"
+                android:background="@drawable/entertonetbank85"
                 android:layout_marginTop="@dimen/margin_top"/>
 
             <TextView
@@ -70,7 +69,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 android:textColor="@color/white_opacity_90"
-                android:text="@string/enterToNetbank"
+                android:text="@string/enterToMobilbank"
                 style="@style/Shadow_Middle_Dark"
                 android:paddingBottom="@dimen/padding_for_text"/>
 
@@ -110,7 +109,7 @@
                 android:layout_width="@dimen/logo_size"
                 android:layout_height="@dimen/logo_size"
                 android:layout_gravity="center"
-                android:background="@drawable/imageselector12"
+                android:background="@drawable/language85"
                 android:layout_marginTop="@dimen/margin_top"/>
 
             <TextView
@@ -151,7 +150,6 @@
 
     <LinearLayout
         android:id="@+id/LinearLayout3"
-        android:layout_below="@id/LinearLayout1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:baselineAligned="false">
@@ -170,7 +168,7 @@
                 android:layout_width="@dimen/logo_size"
                 android:layout_height="@dimen/logo_size"
                 android:layout_gravity="center"
-                android:background="@drawable/imageselector21"
+                android:background="@drawable/branchandatmlist85"
                 android:layout_marginTop="@dimen/margin_top"/>
 
             <TextView
@@ -222,7 +220,7 @@
                 android:layout_width="@dimen/logo_size"
                 android:layout_height="@dimen/logo_size"
                 android:layout_gravity="center"
-                android:background="@drawable/imageselector22"
+                android:background="@drawable/rateofexchange85"
                 android:layout_marginTop="@dimen/margin_top"/>
 
             <TextView
@@ -263,7 +261,6 @@
 
     <LinearLayout
         android:id="@+id/LinearLayout4"
-        android:layout_below="@id/LinearLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:baselineAligned="false">
@@ -282,7 +279,7 @@
                 android:layout_width="@dimen/logo_size"
                 android:layout_height="@dimen/logo_size"
                 android:layout_gravity="center"
-                android:background="@drawable/imageselector31"
+                android:background="@drawable/contact85"
                 android:layout_marginTop="@dimen/margin_top"/>
 
             <TextView
@@ -334,7 +331,7 @@
                 android:layout_width="@dimen/logo_size"
                 android:layout_height="@dimen/logo_size"
                 android:layout_gravity="center"
-                android:background="@drawable/imageselector32"
+                android:background="@drawable/information85"
                 android:layout_marginTop="@dimen/margin_top"
                 />
 

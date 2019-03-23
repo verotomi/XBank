@@ -12,10 +12,10 @@
 
         <ImageView
             android:id="@+id/branchandatm_icon"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
             android:layout_centerVertical="true"
-            android:background="@drawable/atm_icon_red_with_shadow"
+            android:background="@drawable/atmred296"
             android:layout_marginEnd="10dp"/>
 
         <LinearLayout
@@ -39,7 +39,6 @@
                 android:id="@+id/address_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/name"
                 android:layout_marginTop="5dp"
                 android:text="Hősök tere 10."
                 android:textColor="@android:color/black" />
@@ -51,7 +50,6 @@
                 android:layout_toRightOf="@id/branchandatm_icon"
                 android:layout_width="45dp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/name"
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="10dp"
                 android:text="Forint"
@@ -62,7 +60,7 @@
                 android:shadowColor="@color/white"
                 android:layout_centerVertical="true"
                 android:layout_centerHorizontal="true"
-                android:textColor="@android:color/holo_red_dark"/>
+                android:textColor="@color/midgrey3"/>
 
             <TextView
                 android:id="@+id/distance"
@@ -79,12 +77,12 @@
 
             <ImageView
                 android:id="@+id/item_infob"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
-                android:src="@android:drawable/ic_dialog_map" />
+                android:src="@drawable/map_white" />
     </RelativeLayout>
 
     <!-- ezt a két vonalat csak akkor rakjam vissza, ha ki tudtam szedni a listview-ből a sor-elválasztó vonalat.

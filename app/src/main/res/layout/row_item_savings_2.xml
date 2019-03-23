@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- a MobilBankMainActivity-n megjelenő megtakarítási lista felépítése -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="@style/MobilBankMain_Row_Items"
+    >
+
+    <RelativeLayout
+        android:id="@+id/LinLay1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/line_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome betét"
+            style="@style/MobilBankMain_Row_Item_TextView_1"/>
+
+        <TextView
+            android:id="@+id/line_e"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="12345678"
+            style="@style/MobilBankMain_Row_Item_TextView_3" />
+        <TextView
+            android:id="@+id/line_f"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/forint"
+            android:layout_alignParentEnd="true"
+            style="@style/MobilBankMain_Row_Item_TextView_4"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/LinLay2"
+        android:layout_below="@+id/LinLay1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/line_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lejár: 2019-12-31"
+            style="@style/MobilBankMain_Row_Item_TextView_2"
+
+            />
+
+        <LinearLayout
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentStart="true"
+            android:gravity="end">
+            <TextView
+                android:id="@+id/line_c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rate"
+                style="@style/MobilBankMain_Row_Item_TextView_5"
+                />
+            <TextView
+                android:id="@+id/line_d"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 1,85%"
+                style="@style/MobilBankMain_Row_Item_TextView_5"
+                />
+
+            <TextView
+                android:id="@+id/line_h"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Id"
+                android:visibility="gone"/>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

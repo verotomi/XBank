@@ -6,7 +6,596 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <!-- item name="android:actionOverflowButtonStyle">@style/AppTheme.OverFlow</item--> <!-- a 3 pont színét akartam lecserélni (képcserével), de nem sikerült (1)-->
+        <!-- item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item--> <!-- a 3 pont színét akartam lecserélni, de nem sikerült (2)-->
+        <!--item name="android:actionMenuTextAppearance">@style/MyActionBar.MenuTextStyle</item-->
+        <!-- item name="android:actionMenuTextColor">@color/white</item NEM MŰKÖDIK-->
+        <!--item name="actionMenuTextAppearance">@style/MenuItemTextAppearance</item> <!- kisbetűs menük NEM MŰKÖDIK-->
+        <!--item name="actionButtonStyle">@style/AppTheme.Widget.ActionButton</item> <!- kisbetűs menük NEM MŰKÖDIK-->
     </style>
+
+    <style name="generalnotitle" parent="AppTheme">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="CustomPopupTheme" parent="Theme.AppCompat.Light.DarkActionBar"><!-- saját style használata a popup menühöz. Tartozik hozzá egy Java sor is -->
+       <item name="android:popupMenuStyle">@style/PopupMenu</item><!-- if using android.widget.PopupMenu -->
+        <!--item name="popupMenuStyle">@style/PopupMenu</item --><!-- if using android.support.v7.widget.PopupMenu -->
+        <item name="android:textColor">@color/darkgreen2</item>
+        <item name="android:itemBackground">@color/palegrey2</item>
+        <!--item name="android:divider">#00ff00</item><!- ez haatástalan. Lejjebb van megadva a divider színe-->
+        <item name="android:dividerHeight">1dp</item>
+    </style>
+
+    <style name="PopupMenu" parent="ThemeOverlay.AppCompat.Light"><!-- saját style használata a popup menühöz Tartozik hozzá egy Java sor is-->
+        <item name="android:popupBackground">@color/palegreen1</item> <!-- ez lesz a divider színe. Ha ezt nem adom meg, akkor átlátszó lesz a divider!!-->
+    </style>
+
+    <!--style name="AppTheme.OverFlow"--><!-- a 3 pont színét akartam lecserélni (képcserével), de nem sikerült (1)-->
+        <!--item name="android:src">@drawable/three_dots_white</item-->
+    <!--/style-->
+
+    <style name="ThemeOverlay.XBankPopup" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:colorBackground">@color/palegrey2</item>
+        <item name="android:textColorPrimary">@color/darkgreen2</item>
+    </style>
+
+
+    <style name="XBank_Frame_1">
+        <item name="android:layout_marginStart">4dp</item>
+        <item name="android:layout_marginEnd">4dp</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:layout_marginBottom">4dp</item>
+    </style>
+    <style name="XBank_Frame_2">
+        <item name="android:layout_marginStart">4dp</item>
+        <item name="android:layout_marginEnd">4dp</item>
+        <item name="android:layout_marginTop">7dp</item>
+        <item name="android:layout_marginBottom">4dp</item>
+    </style>
+    <style name="XBank_Frame_3">
+        <item name="android:layout_marginStart">0dp</item>
+        <item name="android:layout_marginEnd">0dp</item>
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:layout_marginBottom">15dp</item>
+    </style>
+    <style name="XBank_Title">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginEnd">0dp</item>
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="android:layout_marginBottom">4dp</item>
+    </style>
+    <style name="XBank_EditText" parent="XBank_Spinner" >
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:paddingStart">6dp</item>
+        <item name="android:paddingEnd">6dp</item>
+    </style>
+    <!--style name="MatchSpinnerStyle">
+        <item name="android:divider">@color/midgrey</item>
+        <item name="android:dividerHeight">0.5dp</item>
+        <item name="android:background">@color/lightgrey1</item>
+    </style-->
+    <style name="XBank_Spinner">
+        <!--item name="android:dropDownListViewStyle">@style/MatchSpinnerStyle</item-->
+        <item name="android:background">@drawable/rounded_background</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:paddingTop">3dp</item>
+        <item name="android:paddingBottom">3dp</item>
+    </style>
+    <style name="XBank_Button">
+        <item name="android:background">@drawable/rounded_button_1</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:paddingStart">18dp</item>
+        <item name="android:paddingEnd">18dp</item>
+        <item name="android:paddingTop">9dp</item>
+        <item name="android:paddingBottom">9dp</item>
+    </style>
+    <style name="ImageView_Spinner_Arrow">
+        <item name="android:layout_width">24dp</item>
+        <item name="android:layout_height">24dp</item>
+        <item name="android:layout_marginStart">0dp</item>
+        <item name="android:layout_marginEnd">12dp</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:layout_marginBottom">0dp</item>
+        <item name="android:alpha">@dimen/spinner_arrow_opacity</item>
+    </style>
+    <style name="MobilBankMain_Row_Items">
+        <item name="android:layout_marginStart">0dp</item>
+        <item name="android:layout_marginEnd">0dp</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:layout_marginBottom">4dp</item>
+    </style>
+    <style name="MobilBankMain_TextView">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">0dp</item>
+    </style>
+    <style name="MobilBankMain_TextView_Empty">
+        <item name="android:textStyle">italic</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/midgrey2</item>
+        <item name="android:layout_marginStart">0dp</item>
+        <item name="android:layout_marginEnd">0dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">0dp</item>
+    </style>
+    <style name="MobilBankMain_ImageView">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_width">@dimen/mobilbank_main_icon_size</item>
+        <item name="android:layout_height">@dimen/mobilbank_main_icon_size</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style>
+    <style name="MobilBankMain_ListView">
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">0dp</item>
+    </style>
+    <style name="MobilBankMain_Divider">
+        <item name="android:layout_marginStart">4dp</item>
+        <item name="android:layout_marginEnd">4dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:background">@color/midgrey</item>
+    </style>
+    <style name="MobilBankMain_Row_Item_TextView_1">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="MobilBankMain_Row_Item_TextView_2">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+    <style name="MobilBankMain_Row_Item_TextView_3">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/holo_red_dark</item>
+        <item name="android:paddingEnd">36dp</item>
+    </style>
+    <style name="MobilBankMain_Row_Item_TextView_3a" parent="MobilBankMain_Row_Item_TextView_3">
+        <item name="android:paddingEnd">0dp</item>
+    </style>
+    <style name="MobilBankMain_Row_Item_TextView_4">
+        <item name="android:textSize">12sp</item>
+        <item name="android:paddingStart">4dp</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+    <style name="MobilBankMain_Row_Item_TextView_5">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:paddingStart">0dp</item>
+    </style>
+
+    <style name="BankAccountBalances_Row_Item">
+        <item name="android:paddingStart">4dp</item>
+        <item name="android:paddingEnd">4dp</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:background">@color/grey_zebra_1</item>
+    </style>
+    <style name="BankAccountBalances_Row_Item_TextView_1">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">italic|bold</item>
+    </style>
+    <style name="BankAccountBalances_Row_Item_TextView_2">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    <style name="BankAccountBalances_Row_Item_TextView_3">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    <style name="BankAccountBalances_Row_Item_TextView_4">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/holo_red_dark</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:paddingEnd">40dp</item>
+    </style>
+    <style name="BankAccountBalances_Row_Item_TextView_5">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:paddingStart">4dp</item>
+    </style>
+
+    <style name="Savings_Row_Items" parent = "BankAccountBalances_Row_Item">
+
+    </style>
+    <style name="Savings_Row_Item_TextView_1" parent="BankAccountBalances_Row_Item_TextView_1">
+    </style>
+    <style name="Savings_Row_Item_TextView_2">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingEnd">4dp</item>
+    </style>
+    <style name="Savings_Row_Item_TextView_3">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:paddingEnd">4dp</item>
+    </style>
+    <style name="Savings_Row_Item_TextView_4">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    <style name="Savings_Row_Item_TextView_5a" parent="BankAccountBalances_Row_Item_TextView_4">
+        <item name="android:paddingEnd">0dp</item>
+    </style>
+    <style name="Savings_Row_Item_TextView_5b" parent="BankAccountBalances_Row_Item_TextView_5">
+    </style>
+
+
+    <style name="RecurringTransfers_Row_Items" parent = "BankAccountBalances_Row_Item">
+    </style>
+    <style name="RecurringTransfers_TextView_1" parent="BankAccountBalances_Row_Item_TextView_1">
+    </style>
+    <style name="RecurringTransfers_TextView_2">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingEnd">4dp</item>
+    </style>
+    <style name="RecurringTransfers_TextView_3">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:paddingEnd">0dp</item>
+    </style>
+    <style name="RecurringTransfers_TextView_4">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    <style name="RecurringTransfers_TextView_5a" parent="BankAccountBalances_Row_Item_TextView_4">
+        <item name="android:paddingEnd">0dp</item>
+    </style>
+    <style name="RecurringTransfers_TextView_5b" parent="BankAccountBalances_Row_Item_TextView_5">
+        <item name="android:paddingEnd">0dp</item>
+    </style>
+    <style name="RecurringTransfers_TextView_6">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    <style name="CreditCards_Row_Items" parent = "BankAccountBalances_Row_Item">
+    </style>
+
+    <style name="CreditCards_Divider">
+        <item name="android:background">@color/midgrey</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:layout_marginBottom">4dp</item>
+
+    </style>
+    <style name="CreditCards_TextView" parent="XBank_Title">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_marginStart">0dp</item>
+        <item name="android:layout_marginEnd">0dp</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:layout_marginBottom">0dp</item>
+    </style>
+    <style name="CreditCards_LinLay">
+        <item name="android:layout_marginTop">3dp</item>
+        <item name="android:layout_marginBottom">3dp</item>
+    </style>
+    <style name="CreditCards_Status">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/midgrey2</item>
+        <item name="android:padding">12dp</item>
+    </style>
+    <style name="CreditCards_Switch">
+        <item name="android:textColor">@color/holo_red_dark</item>
+    </style>
+    <style name="CreditCards_SeekBar">
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="CreditCards_Button" parent="XBank_Button">
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:background">@drawable/rounded_button_1</item>
+    </style>
+
+    <style name="FloatingButton">
+        <item name="android:layout_margin">32dp</item>
+    </style>
+
+    <style name="Beneficiaries_Row_Items" parent = "BankAccountBalances_Row_Item">
+    </style>
+    <style name="Beneficiaries_Row_Item_TextView_1" parent="BankAccountBalances_Row_Item_TextView_1">
+    </style>
+    <style name="Beneficiaries_Row_Item_TextView_2">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:layout_marginEnd">8dp</item>
+    </style>
+    <style name="Beneficiaries_Row_Item_TextView_3a">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:layout_marginEnd">8dp</item>
+
+    </style>
+    <style name="Beneficiaries_Row_Item_TextView_3b">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/midgrey2</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="DetailsViews_Header">
+        <item name="android:textSize">23sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_margin">12dp</item>
+        <item name="android:paddingBottom">6dp</item>
+    </style>
+    <style name="DetailsViews_Divider">
+        <item name="android:background">@color/divider_grey2</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style>
+    <style name="DetailsViews_TextView_1">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:paddingEnd">8dp</item>
+    </style>
+    <style name="DetailsViews_TextView_2a">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/midgrey2</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingEnd">4dp</item>
+    </style>
+    <style name="DetailsViews_TextView_2b" parent="DetailsViews_TextView_2a">
+        <item name="android:paddingEnd">0dp</item>
+
+    </style>
+    <style name="DetailsViews_TextView_2c" parent="DetailsViews_TextView_2a">
+        <item name="android:paddingStart">24dp</item>
+    </style>
+    <style name="BankAccountStatements_TextView" parent="XBank_Title">
+        <item name="android:layout_marginStart">24dp</item>
+        <item name="android:layout_marginEnd">0dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style>
+    <style name="BankAccountStatements_Spinner" parent="XBank_Spinner">
+    </style>
+    <style name="BankAccountStatements_Divider">
+        <item name="android:layout_marginStart">4dp</item>
+        <item name="android:layout_marginEnd">4dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">6dp</item>
+        <item name="android:background">@color/midgrey</item>
+    </style>
+    <style name="BankAccountStatements_Row_Item" parent="BankAccountBalances_Row_Item">
+    </style>
+    <style name="BankAccountStatements_Row_Item_TextView_1" parent="BankAccountBalances_Row_Item_TextView_1">
+    </style>
+    <style name="BankAccountStatements_Row_Item_TextView_2">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingStart">12dp</item>
+    </style>
+    <style name="BankAccountStatements_Row_Item_TextView_3">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/midgrey2</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:paddingStart">12dp</item>
+    </style>
+    <style name="BankAccountStatements_Row_Item_TextView_4">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/holo_red_dark</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:paddingEnd">12dp</item>
+    </style>
+    <style name="BankAccountStatements_Row_ImageView">
+        <item name="android:layout_width">28dp</item>
+        <item name="android:layout_height">28dp</item>
+        <item name="android:padding">4dp</item>
+    </style>
+
+
+    <style name="BankAccountHistory_TextView" parent="XBank_Title">
+        <item name="android:layout_marginStart">24dp</item>
+        <item name="android:layout_marginEnd">0dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style>
+    <style name="BankAccountHistory_Spinner" parent="XBank_Spinner">
+    </style>
+    <style name="BankAccountHistory_DatePickers">
+        <item name="android:layout_marginStart">24dp</item>
+        <item name="android:layout_marginEnd">24dp</item>
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="android:layout_marginBottom">3dp</item>
+    </style>
+    <style name="BankAccountHistory_DatePickers_ImageView">
+        <item name="android:layout_marginStart">0dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:layout_marginBottom">0dp</item>
+        <item name="android:layout_width">24dp</item>
+        <item name="android:layout_height">24dp</item>
+    </style>
+    <style name="BankAccountHistory_TextView_FromTo1">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_marginStart">0dp</item>
+        <item name="android:layout_marginEnd">6dp</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:layout_marginBottom">0dp</item>
+    </style>
+    <style name="BankAccountHistory_TextView_FromTo2">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_marginStart">0dp</item>
+        <item name="android:layout_marginEnd">0dp</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:layout_marginBottom">0dp</item>
+    </style>
+    <style name="BankAccountHistory_CheckBoxes">
+        <item name="android:layout_marginStart">12dp</item>
+        <item name="android:layout_marginEnd">12dp</item>
+        <item name="android:layout_marginTop">3dp</item>
+        <item name="android:layout_marginBottom">3dp</item>
+    </style>
+    <style name="BankAccountHistory_CheckBoxIn">
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_marginStart">12dp</item>
+        <item name="android:layout_marginEnd">12dp</item>
+        <item name="android:layout_marginTop">3dp</item>
+        <item name="android:layout_marginBottom">3dp</item>
+    </style>
+    <style name="BankAccountHistory_CheckBoxOut" parent="BankAccountHistory_CheckBoxIn">
+        <item name="android:layout_marginStart">24dp</item>
+    </style>
+    <style name="BankAccountHistory_Divider" parent="BankAccountStatements_Divider">
+    </style>
+    <style name="BankAccountHistory_TextView_Empty">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:textColor">@color/midgrey2</item>
+        <item name="android:layout_marginStart">0dp</item>
+        <item name="android:layout_marginEnd">0dp</item>
+        <item name="android:layout_marginTop">24dp</item>
+        <item name="android:layout_marginBottom">0dp</item>
+    </style>
+
+    <style name="BankAccountHistory_Row_Item" parent="BankAccountBalances_Row_Item">
+    </style>
+    <style name="BankAccountHistory_Row_Item_TextView_1" parent="BankAccountBalances_Row_Item_TextView_1">
+    </style>
+    <style name="BankAccountHistory_Row_Item_TextView_2">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:paddingEnd">4dp</item>
+    </style>
+    <style name="BankAccountHistory_Row_Item_TextView_3">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:paddingEnd">0dp</item>
+    </style>
+    <style name="BankAccountHistory_Row_Item_TextView_4">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    <style name="BankAccountHistory_Row_Item_TextView_5">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="BankAccountHistory_Row_Item_TextView_6a" parent="BankAccountBalances_Row_Item_TextView_4">
+        <item name="android:paddingEnd">0dp</item>
+    </style>
+    <style name="BankAccountHistory_Row_Item_TextView_6b" parent="BankAccountBalances_Row_Item_TextView_5">
+    </style>
+
+    <style name="TransferMoney_TextViewSablon" parent="XBank_Title">
+        <item name="android:layout_marginEnd">8dp</item>
+    </style>
+    <style name="TransferMoney_EditTextAmount" parent="XBank_EditText">
+        <item name="android:layout_marginEnd">4dp</item>
+        <item name="android:paddingEnd">4dp</item>
+    </style>
+    <style name="TransferMoney_TextViewCurrency" parent="XBank_EditText">
+        <item name="android:paddingStart">4dp</item>
+        <item name="android:layout_marginStart">0dp</item>
+    </style>
+    <style name="TransferMoneyRecurring_Spinner_Frequency" parent="XBank_Spinner">
+        <item name="android:paddingEnd">4dp</item>
+        <item name="android:layout_marginStart">0dp</item>
+        <item name="android:layout_marginEnd">2dp</item>
+    </style>
+    <style name="TransferMoneyRecurring_Spinner_Days" parent="XBank_Spinner">
+        <item name="android:paddingEnd">4dp</item>
+        <item name="android:layout_marginStart">2dp</item>
+        <item name="android:layout_marginEnd">0dp</item>
+    </style>
+    <style name="TransferMoneyRecurring_LinLay_Spinners_Frequeny_And_Days" parent="XBank_Spinner">
+        <item name="android:background"></item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:paddingEnd">0dp</item>
+    </style>
+    <style name="TransferMoneyRecurring_Spinner_Arrow_Frequeny_And_Days" parent="ImageView_Spinner_Arrow">
+        <item name="android:layout_marginStart">0dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:layout_marginBottom">0dp</item>
+        <item name="android:alpha">@dimen/spinner_arrow_opacity</item>
+    </style>
+    <style name="EditRecurringTransfer_TextViewStatus" parent="XBank_Title">
+        <item name="android:layout_marginEnd">8dp</item>
+    </style>
+    <style name="EditRecurringTransfer_Switch">
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:switchPadding">6dp</item>
+        <item name="android:padding">0dp</item>
+    </style>
+    <style name="SavingsNew_EditTextAmount" parent="TransferMoney_EditTextAmount">
+    </style>
+    <style name="SavingsNew_TextViewCurrency" parent="TransferMoney_TextViewCurrency">
+    </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <style name="Shadow_Middle_Dark">
         <item name="android:shadowRadius">10</item>
@@ -29,6 +618,15 @@
         <item name="android:shadowColor">@color/white</item>
     </style>
 
+
+    <style name="Shadow_Small_Light">
+        <item name="android:shadowRadius">4</item>
+        <item name="android:shadowDy">2</item>
+        <item name="android:shadowDx">2</item>
+        <item name="android:shadowColor">@color/lightgrey</item>
+    </style>
+
+
     <style name="Buttons_Numeric">
         <item name="android:layout_margin">5dp</item>
         <item name="android:textStyle">bold</item>
@@ -38,6 +636,7 @@
         <item name="android:shadowDy">3</item>
         <item name="android:shadowDx">3</item>
         <item name="android:shadowColor">@color/darkgrey</item>
+        <item name="android:textSize">18sp</item>
         <!-- item name="android:textAllCaps">false</item--><!-- Gombokon a szöveg alapból nagybetűs. Ezzel lehet letiltani a nagybetűsítést-->
     </style>
 
@@ -45,5 +644,45 @@
         <item name="textAllCaps">false</item><!-- Nem működik :( -->
         <item name="android:textAllCaps">false</item><!-- Nem működik :( -->
     </style>
+
+    <style name="NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!-- Menü kisbetűsítés - NEM MŰKÖDIK style name="MenuItemTextAppearance" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Menu">
+        <item name="textAllCaps">false</item>
+        <item name="android:textColor">@color/white</item>
+    </style-->
+
+    <!-- Menü kisbetűsítés - NEM MŰKÖDIK style name="AppTheme.Widget.ActionButton" parent="@style/Widget.AppCompat.ActionButton">
+        <item name="textAllCaps">false</item>
+    </style-->
+
+    <!-- style name="MyActionBar.MenuTextStyle"
+        parent="android:style/TextAppearance.Holo.Widget.ActionBar.Menu">
+    </style-->
+
+    <style name="Theme.AppCompat.Light.NoActionBar.FullScreen" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+
+    </style>
+
+    <style name="Theme.AppCompat.Light.NoActionBar.StatusBarColor" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:statusBarColor">@color/midgrey3</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+
+    <style name="NavigationTheme" parent="AppTheme">
+        <item name="listPreferredItemHeightSmall">28dp</item><!-- menu item height- vary as u need -->
+    </style>
+
 
 </resources>
